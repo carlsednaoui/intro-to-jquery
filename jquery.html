@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Intro: Learn to Use jQuery With This Fun jQuery Training Guide</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
+        <!-- Syntax Highlighting Starts -->
+        <link rel="stylesheet" href="syntax-highlighting/tomorrow-night.css">
+        <script src="syntax-highlighting/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- Syntax Highlighting Ends -->
+
+    </head>
+    <body>
+        <h1>Learning jQuery with Street Fighter and Hadoukens</h1>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#what-is-jquery">What is jQuery</a></li>
+            <li><a href="#installing-jquery">Installing jQuery</a></li>
+            <li><a href="#opening-chrome-console">Opening Chrome's console</a></li>
+            Party rocking starts!
+            <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
+        </ul>
+
+        <div class="section" id="introduction">
+            <p>This interactive guide will provide you with a basic understanding of jQuery and how to use it on your own projects. You'll learn how to install jQuery, how to select and modify elements and we'll even show you how to do some really cool jQuery animations.</p>
+
+            <p>This guide assumes that you have a basic understanding of HTML, CSS and CSS selectors. If you need a basic refresher on these topics we recommend looking at <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro</a>.</p>
+
+            <p>Note: In order to make this guide a bit more fun we're using Ruy, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ruy and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p>
+        </div>
+
+        <h2>Ready? Let's dive in!</h2>
+        <div class="section" id="what-is-jquery">
+            <h3>What is jQuery</h3>
+            <p>This is how jQuery.com describes jQuery: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers..."</p>
+            <p>Here's another way to put it: jQuery helps you do awesome things within the browser without having to worry about cross-browser differences. This means that the jQuery code you write will work seamlessly in Chrome, Safari, Firefox, Opera, and more. jQuery is a very powerful JavaScript library.</p>
+        </div>
+
+        <div class="section" id="installing-jquery">
+            <h3>How to install jQuery?</h3>
+            <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
+            <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
+            <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
+            <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="example.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;!-- Your content goes here -->
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
+
+            <p>For the rest of this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. While you can use any browser you like, we recommend you switch to Chrome and follow along.</p>
+        </div>
+
+        <h2>Time to get our hands dirty!</h2>
+        <div class="section" id="opening-the-console">
+            <h3>Opening Chrome's console</h3>
+            <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) code and see the results right away. Here's how to open the console:</p>
+            <ul>
+                <li>Use the keyboard shortcut Command - Option - J (Mac) or Control -Shift -J (Windows/Linux).</li>
+                <li>Select View > Developer > JavaScript Console.</li>
+            </ul>
+            <image src="chrome-console-1.png" class="screenshot" />
+        </div>
+        
+
+        http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
+        <img src="ruy_stand_still.png">
+    </body>
+</html>
