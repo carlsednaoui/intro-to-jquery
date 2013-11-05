@@ -85,4 +85,14 @@ h3 {
 .screenshot {
     margin: 20px 0;
     max-width: 960px;
+    border-radius: 3px;
+    webkit-border-radius: 3px;
+    moz-border-radius: 3px;
+}
+
+#green-box {
+    height: 200px;
+    width: 200px;
+    background-color: #40D47E;
+    border: 10px solid #27AE60;
 }
