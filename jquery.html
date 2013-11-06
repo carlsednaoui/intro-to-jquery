@@ -74,11 +74,28 @@
         </div>
 
         <div class="section" id="selecting-an-element">
-            <div id="green-box"></div>
+            <h3>Selecting an element with jQuery</h3>
+            To select the green box below, simply type this in your console:
             <pre><code>$('#green-box')</code></pre>
 
+            <div id="green-box" class="fixed"></div>
+            
+            <p>You should see something like this</p>
             <image src="green-box-1.png" class="screenshot" />
+
+            <p>Great! Let's now change the color of our square to a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> (that's the name of the CSS color). In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
+            <pre><code>$('#green-box').css('background-color','lightskyblue  ')</code></pre>
+            <p>Protip: You can use the "up" arrow to get the last command you typed in the console. This will save you tons of time.</p>
         </div>
+
+        <script>
+            $(window).scroll(function(e){ 
+              $el = $('.fixed'); 
+              if ($(this).scrollTop() > 1800 && $el.css('position') != 'fixed'){ 
+                $('.fixed').css({'position': 'fixed', 'top': '0px'}); 
+              } 
+            });
+        </script>
         
 
         http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
