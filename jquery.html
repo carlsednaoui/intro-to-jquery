@@ -84,18 +84,40 @@
             <image src="green-box-1.png" class="screenshot" />
 
             <p>Great! Let's now change the color of our square to a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> (that's the name of the CSS color). In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
-            <pre><code>$('#green-box').css('background-color','lightskyblue  ')</code></pre>
-            <p>Protip: You can use the "up" arrow to get the last command you typed in the console. This will save you tons of time.</p>
-        </div>
+            <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
+            <p>Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
+            <p>Protip numero-dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. Promise!</p>
 
-        <script>
-            $(window).scroll(function(e){ 
-              $el = $('.fixed'); 
-              if ($(this).scrollTop() > 1800 && $el.css('position') != 'fixed'){ 
-                $('.fixed').css({'position': 'fixed', 'top': '0px'}); 
-              } 
-            });
-        </script>
+            <p>Let's now change the border color to a nice <a href="http://www.supernaturalwiki.com/images/1/15/Zoolander.jpg" target="blank">steelblue</a> color. Any guess as to how to do this?</p>
+            <pre><code>$('#green-box').css('border-color','steelblue')</code></pre>
+
+            <p>Actually, how about we remove the background color? We can do this by setting the background color to 'transparent'.</p>
+            <pre><code>$('#green-box').css('background-color','transparent')</code></pre>
+
+            <p>Ready for something amazing? Let's add a hadouken inside our box to see what happens. Good thing we have a nice little hadouken saved up at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. In order to add this to our box we will use jQuery's <a href="http://api.jquery.com/html/" target="blank">HTML</a> api which allows us to add HTML to any given element and we'll add an <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML image</a>.</p>
+            <pre><code>$('#green-box').html('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
+
+            <p>Another way to add the hadouken would be to use jQuery's <a href="http://api.jquery.com/append/" target="blank">Append</a> API.</p>
+            <pre><code>$('#green-box').append('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
+
+            <p>Extra credit: Can you guess what happens if you run the 'append' command several times? Now try running the 'html' one several times. I'll let you play with this for a minute....</p>
+
+            <p>Were you able to spot the difference? If you were to say that the 'append' command keeps on appending hadoukens forever while the 'html' command replaces everything with only 1 hadouken you'd be 100% right!</p>
+
+            <p>Pro-tip: Remember that you can use the "up" arrow in your console to go back to a previous command.</p>
+
+            <p class="summary">Here's what you learned in this section:
+                <ul>
+                    <li>How to select an element with jQuery</li>
+                    <li>How to use the jQuery CSS api to change the background and border color of an HTML element</li>
+                    <li>How to change the HTML of a given element</li>
+                    <li>How to append HTML to any element</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </p>
+        </div>
         
 
         http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
