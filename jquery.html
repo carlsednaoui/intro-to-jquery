@@ -11,6 +11,10 @@
         <script>hljs.initHighlightingOnLoad();</script>
         <!-- Syntax Highlighting Ends -->
 
+        <!-- Google Fonts Starts -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <!-- Google Fonts Ends -->        
+
     </head>
     <body>
         <h1>Learning jQuery with Street Fighter and Hadoukens</h1>
@@ -18,8 +22,6 @@
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#what-is-jquery">What is jQuery</a></li>
             <li><a href="#installing-jquery">Installing jQuery</a></li>
-            <li><a href="#opening-chrome-console">Opening Chrome's console</a></li>
-            Party rocking starts!
             <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
             <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
         </ul>
@@ -70,23 +72,23 @@
                 <li>Use the keyboard shortcut Command - Option - J (Mac) or Control -Shift -J (Windows/Linux).</li>
                 <li>Select View > Developer > JavaScript Console.</li>
             </ul>
-            <image src="chrome-console-1.png" class="screenshot" />
+            <image src="images/chrome-console-1.png" class="screenshot" />
         </div>
 
         <div class="section" id="selecting-an-element">
             <h3>Selecting an element with jQuery</h3>
-            To select the green box below, simply type this in your console:
+            <p>To select the green box below, simply type this in your console:</p>
             <pre><code>$('#green-box')</code></pre>
 
             <div id="green-box" class="fixed"></div>
             
             <p>You should see something like this</p>
-            <image src="green-box-1.png" class="screenshot" />
+            <image src="images/green-box-1.png" class="screenshot" />
 
             <p>Great! Let's now change the color of our square to a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> (that's the name of the CSS color). In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
             <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
-            <p>Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
-            <p>Protip numero-dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. Promise!</p>
+            <p class="protip">Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
+            <p class="protip">Protip numero-dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. Promise!</p>
 
             <p>Let's now change the border color to a nice <a href="http://www.supernaturalwiki.com/images/1/15/Zoolander.jpg" target="blank">steelblue</a> color. Any guess as to how to do this?</p>
             <pre><code>$('#green-box').css('border-color','steelblue')</code></pre>
@@ -104,23 +106,21 @@
 
             <p>Were you able to spot the difference? If you were to say that the 'append' command keeps on appending hadoukens forever while the 'html' command replaces everything with only 1 hadouken you'd be 100% right!</p>
 
-            <p>Pro-tip: Remember that you can use the "up" arrow in your console to go back to a previous command.</p>
+            <p class="protip">Protip: Remember that you can use the "up" arrow in your console to go back to a previous command.</p>
 
-            <p class="summary">Here's what you learned in this section:
+            <div class="summary">Here's what you learned in this section:
                 <ul>
                     <li>How to select an element with jQuery</li>
                     <li>How to use the jQuery CSS api to change the background and border color of an HTML element</li>
                     <li>How to change the HTML of a given element</li>
                     <li>How to append HTML to any element</li>
-                    <li></li>
-                    <li></li>
                 </ul>
 
-            </p>
+            </div>
         </div>
         
 
         http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
-        <img src="ruy_stand_still.png">
+        <img src="images/ruy_stand_still.png">
     </body>
 </html>

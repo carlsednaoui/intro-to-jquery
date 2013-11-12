@@ -59,19 +59,37 @@ table {
 body {
     margin: 50px auto;
     width: 960px;
-    background-color: salmon;
+    /*background-color: #4AA3DF;*/
+    background: url('images/bcg.png');
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.3em;
 }
 
 h1 {
-    font-size: 2em;
+    color: #2C3E50;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin: 40px 0;
 }
 
 h2 {
     font-size: 1.8em;
+    color: #2C3E50;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 30px 0;
 }
 
 h3 {
     font-size: 1.5em;
+    color: #2C3E50;
+    font-family: 'Lato', sans-serif;
+    margin: 20px 0;
 }
 
 .section {
@@ -79,11 +97,19 @@ h3 {
 }
 
 .section p {
-    margin: 20px 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    list-style: lower-greek;
+    font-size: .9em
 }
 
 .screenshot {
-    margin: 20px 0;
     max-width: 960px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -95,4 +121,13 @@ h3 {
     width: 200px;
     background-color: #40D47E;
     border: 10px solid #27AE60;
+}
+
+p a, ul a{
+    color: #2E8ECE;
+    text-decoration: none;
+}
+
+.protip {
+    color: #3D566E;
 }
