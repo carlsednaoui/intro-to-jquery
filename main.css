@@ -131,3 +131,38 @@ p a, ul a{
 .protip {
     color: #3D566E;
 }
+
+
+
+
+/* Ruy in CSS */
+#ruy-css {
+    height: 500px;
+    width: 500px;
+    background: url('images/ruy_stand_still.png') no-repeat;
+}
+
+#ruy-css:hover {
+    background: url('images/ruy_animated.gif') no-repeat;
+}
+
+#ruy-css:active {
+    background: url('images/ryu_hadoken_pose.png') no-repeat;
+}
+
+#ruy-css:active img {
+    visibility: visible;
+    -webkit-animation: moveLeft 1s linear;
+}
+
+#ruy-css img {
+    margin-top: 65px;
+    margin-left: 390px;
+    visibility: hidden;
+}
+
+
+@-webkit-keyframes moveLeft {
+    0%   {margin-left:390px;}
+    100%  {margin-left:1000px;}
+}
