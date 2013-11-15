@@ -32,18 +32,19 @@
         </ul>
 
         <div class="section" id="introduction">
-            <p>This interactive guide will provide you with a basic understanding of jQuery and how to use it on your own projects. You'll learn how to install jQuery, how to select and modify elements and we'll even show you how to do some really cool jQuery animations.</p>
+            <p>This interactive guide will provide you with a basic understanding of jQuery and how to use it on your own projects. You'll learn how to install jQuery, how to select and modify elements and we'll even show you how to do a really cool jQuery animations.</p>
 
-            <p>This guide assumes that you have a basic understanding of HTML, CSS and CSS selectors. If you need a basic refresher on these topics we recommend looking at <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro</a>.</p>
+            <p>This guide assumes that you have a basic understanding of HTML, CSS and CSS selectors. If you need a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>.</p>
 
-            <p>Note: In order to make this guide a bit more fun we're using Ryu, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p>
+            <p>Note: In order to make this guide a bit more fun we're using Ryu, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>. Also, we're not going to cover jQuery best practices or provide you with the fastest way to achieve something. Instead, we're going to take the time to explain how things work by using step-by-step examples.</p>
         </div>
 
         <h2>Ready? Let's dive in!</h2>
         <div class="section" id="what-is-jquery">
             <h3>What is jQuery</h3>
-            <p>This is how jQuery.com describes jQuery: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers..."</p>
-            <p>Here's another way to put it: jQuery helps you do awesome things within the browser without having to worry about cross-browser differences. This means that the jQuery code you write will work seamlessly in Chrome, Safari, Firefox, Opera, and more. jQuery is a very powerful JavaScript library.</p>
+            <p>A said on jQuery.com: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling..."</p>
+
+            <p>Here's another way to put it: jQuery is a very powerful JavaScript library that helps you do awesome things within the browser without having to worry about cross-browser differences. This means that the jQuery code you write will work seamlessly in Chrome, Safari, Internet Explorer, Firefox and Opera.</p>
         </div>
 
         <div class="section" id="installing-jquery">
@@ -182,21 +183,44 @@
                 <li>"function() { this.src = 'http://i.imgur.com/JFMYx3j.png' }" - Lastly we pass our second function, which does the same as our previous function, but with a different image.</li>
             </ul>
 
-            <p>It's totally ok if you feel slightly confused right now. If you keep reading this guide you'll get the hang of it'.</p>
+            <p>Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your terminal if you get stuck or refresh the page.</p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/JFMYx3j.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/TYvGQPJ.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/JFMYx3j.png'
+})
+</code></pre>
+
+            <p>It's totally ok to feel slightly confused right now. If you keep reading this guide you'll get the hang of it. We still have a bit more to do, giving us plenty of time to practice. Here's what coming next:</p>
+            <ul>
+                <li>Add the Hadouken pose when a user clicks on Ryu</li>
+                <li>Add the Hadouken next to Ryu</li>
+                <li>Make the Hadouken move</li>
+                <li>Get Ryu out of the Hadouken pose</li>
+                <li>Remove the Hadouken once it's done moving</li>
+            </ul>
+
+            <h3>The Hadouken Pose</h3>
+
+            <h3>Adding The Hadouken</h3>
+
+            <h3>Animating The Hadouken</h3>
+
+            <h3>Getting Ryu out of the Hadouken Pose</h3>
+            <p>
         </div>
         
 
-<!--         $('#main-example').hover(function() {this.src = 'images/ryu_animated_fixed.gif'}, function() {this.src = 'images/ryu_stand_still_fixed.png'});
-        $('#main-example').mousedown(function() {this.src = 'images/ryu_hadoken_pose_fixed.png'});
-        $('#main-example').mousedown(function() {$('.moving-hadouken').remove();});
-        $('#main-example').mousedown(function() {$('#main-example-container').append('<img class="demo-hadouken moving-hadouken" src="images/hadouken.gif" class="moving-hadouken">');});
-        $('#main-example').mousedown(function() {
+<!-- 
+        $('#my-div img').mousedown(function() {this.src = 'images/ryu_hadoken_pose_fixed.png'});
+        $('#my-div img').mousedown(function() {$('#my-div').append('<img class="demo-hadouken moving-hadouken" src="images/hadouken.gif" class="moving-hadouken">');});
+        $('#my-div img').mousedown(function() {
           $('.moving-hadouken').animate({"margin-left": "600px"}, 1000, 'swing', function() {
             this.remove();
           });
         });
-        $('#main-example').mouseup(function() {this.src = 'images/ryu_animated_fixed.gif'});
-        
+        $('#main-example').mouseup(function() {this.src = 'images/ryu_animated_fixed.gif'});    
  -->
 
 
