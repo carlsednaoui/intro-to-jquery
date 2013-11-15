@@ -82,14 +82,16 @@ h2 {
     color: #2C3E50;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    margin: 30px 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 h3 {
     font-size: 1.5em;
     color: #2C3E50;
     font-family: 'Lato', sans-serif;
-    margin: 20px 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .section {
@@ -97,7 +99,7 @@ h3 {
 }
 
 .section p {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 

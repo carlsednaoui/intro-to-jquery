@@ -82,7 +82,7 @@
 
         <div class="section" id="selecting-an-element">
             <h3>Selecting an element with jQuery</h3>
-            <p>To select the green box below, simply type this in your console:</p>
+            <p>To select the green box below, simply type this in your console then press "enter":</p>
             <pre><code>$('#green-box')</code></pre>
 
             <div id="green-box" class="fixed"></div>
@@ -139,7 +139,7 @@
             <h2>Getting Started with Our Project</h2>
             <p>Here's what we need to achieve this project:</p>
             <ul>
-                <li>Our 4 images. Including: Ruy at a stand still, Ruy animated, Ruy in the Hadouken pose and our famous Hadouken.</li>
+                <li>Our 4 images. Including: Ryu at a stand still, Ryu animated, Ryu in the Hadouken pose and our famous Hadouken.</li>
                 <li>An empty &lt;div&gt; which we'll be working from.</li>
             </ul>
             <p>Luckily for you, I've included a nice little &lt;div&gt; below with an ID of 'my-div' (pardon the lack of originality). You already know how to select this div, don't know? Below's the code just in case you want to double check.</p>
@@ -147,9 +147,42 @@
 
             <div id="my-div"></div>
             <p>Here's what you should see in your console:</p>
-            <img src="images/code-along-1.png">
+            <img src="images/code-along-1.png" class="screenshot">
 
-            <p>Now that we have our div selected, let's add our original Ryu.
+            <h3>Adding Ryu at stand still</h3>
+            <p>Now that we have our &lt;div&gt; selected, let's add Ryu at stand still. The image you need is available here: <a href="http://i.imgur.com/JFMYx3j.png" target="blank">http://i.imgur.com/JFMYx3j.png</a></p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/JFMYx3j.png"&gt;')</code></pre>
+            <img src="images/code-along-2.png" class="screenshot">
+            
+            <p class="protip">Protip: If you type the wrong command and don't know how to go back to where we were, you can simple refresh this page and start over. Remember the "up" arrow shortcut in the console :)</p>
+
+            <p>Quick side note: You'll notice that our last line of code has a little "&#9654;". This means that there's more details to be found in there. If you click on that line you should see the &lt;div&gt; expand and reveal our newly added image, like so:</p>
+            <img src="images/code-along-3.png" class="screenshot">
+
+            <h3>Adding our animated Ryu</h3>
+            <p>When a user hover's over our image, we want to animate Ryu as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/TYvGQPJ.gif" target="blank">http://i.imgur.com/TYvGQPJ.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code you want to execute.</p>
+
+            <p>Just a second ago I mentioned that <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a> can take 1 or 2 functions here's the difference: If you use 1 function, this function will run when a user hovers over the element. That's it. If you use 2 functions, the 1st function will run when the user hovers over the element and the 2nd function will run when the user "un-hovers" (or stops hovering) over the element.</p>
+
+            <p>For this example we'll need to use 2 functions. The first function will change Ryu from a stand still position to an animated one. The second function (which will run when the user stops hovering over our image) will change Ryu from an animated position back to a stand still one.</p>
+
+            <p>Below is the code you need to run.</p>
+            <p>Quick note: Since you're using your console, it's easier to type all of this code in one long line. But, if you prefer to use several lines, you can also hit "option" + "enter" on a Mac to get a new line. Just like before, to run your code simply hit "enter".</p>
+            <pre><code>$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/TYvGQPJ.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/JFMYx3j.png'
+})</code></pre>
+            <p>Let's go over what's happening in the above block of code.</p>
+            <ul>
+                <li>"$('#my-div img')" - First, we select the image that is inside #my-div.</li>
+                <li>".hover(" - Then use jQuery's hover API.</li>
+                <li>"function() { this.src = 'http://i.imgur.com/TYvGQPJ.gif' }" - We then pass our first function. All this is saying is that we'll change the source (or, as said in HTMl, the "src") for this" element. The "this" here refers to the image inside our div, which we selected 2 steps ago. Here's a detailed explanation on using <a href="http://stackoverflow.com/questions/3127429/javascript-this-keyword" target="blank">"this"</a> in JavaScript and jQuery (a tricky concept).</li>
+                <li>"," - Is used to separate our functions.</li>
+                <li>"function() { this.src = 'http://i.imgur.com/JFMYx3j.png' }" - Lastly we pass our second function, which does the same as our previous function, but with a different image.</li>
+            </ul>
+
+            <p>It's totally ok if you feel slightly confused right now. If you keep reading this guide you'll get the hang of it'.</p>
         </div>
         
 
