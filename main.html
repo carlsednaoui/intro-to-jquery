@@ -202,6 +202,15 @@ $('#my-div img').hover( function() {
             </ul>
 
             <h3>The Hadouken Pose</h3>
+            <p>We now want to change Ryu's pose when someone clicks on him. To do this we'll use <a href="http://api.jquery.com/mousedown/" target="blank">jQuery's Mousedown API</a>. Mousedown only takes 1 function and it will allow us to trigger this function whenever the user presses down on their mouse. Here's how to use it:</p>
+            <pre><code>$('#my-div img').mousedown( function() {this.src = 'http://i.imgur.com/1F4rSOc.png' });</code></pre>
+            
+            <p>And here's what's happening:</p>
+            <ul>
+                <li>"$('#my-div img')" - First, we select the image that is inside #my-div.</li>
+                <li>".mousedown(" - Then use jQuery's Mousedown API.</li>
+                <li>"function() { this.src = 'http://i.imgur.com/1F4rSOc.png' }" - We then pass our function which will change the src of the image. This is VERY similar to what we did earlier.
+            </ul>
 
             <h3>Adding The Hadouken</h3>
 
