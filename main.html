@@ -26,6 +26,9 @@
             <li><a href="#installing-jquery">Installing jQuery</a></li>
             <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
             <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
+            <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
+            <li><a href="#end-goal">Our Small jQuery Project</a></li>
+            <li><a href="#project-start">Getting Started with Our Project</a></li>
         </ul>
 
         <div class="section" id="introduction">
@@ -33,7 +36,7 @@
 
             <p>This guide assumes that you have a basic understanding of HTML, CSS and CSS selectors. If you need a basic refresher on these topics we recommend looking at <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro</a>.</p>
 
-            <p>Note: In order to make this guide a bit more fun we're using Ruy, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ruy and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p>
+            <p>Note: In order to make this guide a bit more fun we're using Ryu, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p>
         </div>
 
         <h2>Ready? Let's dive in!</h2>
@@ -87,7 +90,10 @@
             <p>You should see something like this</p>
             <image src="images/green-box-1.png" class="screenshot" />
 
-            <p>Great! Let's now change the color of our square to a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> (that's the name of the CSS color). In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
+        </div>
+        <div class="section" id="jquery-api">
+            <h3>Using the jQuery API for Fun</h3>
+            <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> color (that's the name of the CSS color)? In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
             <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
             <p class="protip">Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
             <p class="protip">Protip numero-dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. Promise!</p>
@@ -120,16 +126,46 @@
 
             </div>
         </div>
+
+        <div class="section" id="end-goal">
+            <h2>Our Small jQuery Project</h2>
+            <p>By now you should have a basic understanding on how to use jQuery. In order to gain more experience using this amazing library we're going to work on a small project together.... are you ready? We're going to have <a href="https://www.google.com/search?q=ryu+hadouken&tbm=isch" target="blank">Ryu fire a hadouken</a>. Here's what our end project will look like. (Make sure to hover on Ryu and also click on him :)</p>
+            <div id="main-example-container" style="width:1300px;">
+                <img id="main-example" src="images/ryu_stand_still.png">
+            </div>
+        </div>
+
+        <div class="section" id="project-start">
+            <h2>Getting Started with Our Project</h2>
+            <p>Here's what we need to achieve this project:</p>
+            <ul>
+                <li>Our 4 images. Including: Ruy at a stand still, Ruy animated, Ruy in the Hadouken pose and our famous Hadouken.</li>
+                <li>An empty &lt;div&gt; which we'll be working from.</li>
+            </ul>
+            <p>Luckily for you, I've included a nice little &lt;div&gt; below with an ID of 'my-div' (pardon the lack of originality). You already know how to select this div, don't know? Below's the code just in case you want to double check.</p>
+            <pre><code>$('#my-div')</code></pre>
+
+            <div id="my-div"></div>
+            <p>Here's what you should see in your console:</p>
+            <img src="images/code-along-1.png">
+
+            <p>Now that we have our div selected, let's add our original Ryu.
+        </div>
         
 
-        <p>http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/</p>
-        <div id="main-example-container" style="width:1300px;">
-            <img id="main-example" src="images/ruy_stand_still.png">
-        </div>
+<!--         $('#main-example').hover(function() {this.src = 'images/ryu_animated_fixed.gif'}, function() {this.src = 'images/ryu_stand_still_fixed.png'});
+        $('#main-example').mousedown(function() {this.src = 'images/ryu_hadoken_pose_fixed.png'});
+        $('#main-example').mousedown(function() {$('.moving-hadouken').remove();});
+        $('#main-example').mousedown(function() {$('#main-example-container').append('<img class="demo-hadouken moving-hadouken" src="images/hadouken.gif" class="moving-hadouken">');});
+        $('#main-example').mousedown(function() {
+          $('.moving-hadouken').animate({"margin-left": "600px"}, 1000, 'swing', function() {
+            this.remove();
+          });
+        });
+        $('#main-example').mouseup(function() {this.src = 'images/ryu_animated_fixed.gif'});
+        
+ -->
 
-        <div id="ruy-css">
-            <img src="images/hadouken.gif" />
-        </div>
 
     </body>
 </html>

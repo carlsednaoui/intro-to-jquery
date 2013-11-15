@@ -1,4 +1,4 @@
-/*******************************
+******************************
 -> CSS reset
 *******************************/
 
@@ -132,11 +132,15 @@ p a, ul a{
     color: #3D566E;
 }
 
-
-
+/* jQuery project demo */
+.demo-hadouken {
+    vertical-align: top;
+    margin-top: 140px; 
+    margin-left: -100px;
+}
 
 /* Ruy in CSS */
-#ruy-css {
+/*#ruy-css {
     height: 500px;
     width: 500px;
     background: url('images/ruy_stand_still.png') no-repeat;
