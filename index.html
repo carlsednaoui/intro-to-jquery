@@ -20,23 +20,13 @@
     </head>
     <body>
         <h1>Learning jQuery with Street Fighter and Hadoukens</h1>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#what-is-jquery">What is jQuery</a></li>
-            <li><a href="#installing-jquery">Installing jQuery</a></li>
-            <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
-            <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
-            <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
-            <li><a href="#end-goal">Our Small jQuery Project</a></li>
-            <li><a href="#project-start">Getting Started with Our Project</a></li>
-        </ul>
-
+        
         <div class="section" id="introduction">
-            <p>This interactive guide will provide you with a basic understanding of jQuery and how to use it on your own projects. You'll learn how to install jQuery, how to select and modify elements and we'll even show you how to do a really cool jQuery animations.</p>
+            <p>Through this interactive guide you'll gain a basic understanding of jQuery and how to use it on your own projects. You'll learn how to select elements, how to modify them and we'll even get to use some really cool jQuery animations.</p>
 
-            <p>This guide assumes that you have a basic understanding of HTML, CSS and CSS selectors. If you need a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>.</p>
+            <p>To get through this guide you'll need a basic understanding of HTML, CSS and CSS selectors. If you'd like a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>. Also, it's worth mentioning that we're not going to focus on jQuery best practices but instead on we'll focus on getting familiar with jQuery through repetition and step-by-step examples.</p>
 
-            <p>Note: In order to make this guide a bit more fun we're using Ryu, from Street Fighter, and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>. Also, we're not going to cover jQuery best practices or provide you with the fastest way to achieve something. Instead, we're going to take the time to explain how things work by using step-by-step examples.</p>
+            <p>Disclosure: This guide uses Ryu from Street Fighter and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p>
         </div>
 
         <h2>Ready? Let's dive in!</h2>
@@ -47,65 +37,72 @@
             <p>Here's another way to put it: jQuery is a very powerful JavaScript library that helps you do awesome things within the browser without having to worry about cross-browser differences. This means that the jQuery code you write will work seamlessly in Chrome, Safari, Internet Explorer, Firefox and Opera.</p>
         </div>
 
-        <div class="section" id="installing-jquery">
-            <h3>How to install jQuery?</h3>
-            <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
-            <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
 
-            <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
-            <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
-
-            <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
-            <pre><code>&lt;html&gt;
-    &lt;head&gt;
-        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
-        &lt;script src="example.js"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;!-- Your content goes here -->
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
-
-            <p>For the rest of this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. While you can use any browser you like, we recommend you switch to Chrome and follow along.</p>
-        </div>
-
-        <h2>Time to get our hands dirty!</h2>
+        <h2>Time to get our hands dirty</h2>
         <div class="section" id="opening-the-console">
+            <p>In this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. Yes, you can use any browser you'd like but I strongly recommend you switch to Chrome to follow along.</p>
+
             <h3>Opening Chrome's console</h3>
-            <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) code and see the results right away. Here's how to open the console:</p>
+            <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) and see the results right away. Here's how to open the console:</p>
             <ul>
-                <li>Use the keyboard shortcut Command - Option - J (Mac) or Control -Shift -J (Windows/Linux).</li>
-                <li>Select View > Developer > JavaScript Console.</li>
+                <li>Use the keyboard shortcut Command: Option + J (Mac) or Control + Shift  + J (Windows/Linux).</li>
+                <li>You can also go to View > Developer > JavaScript Console.</li>
             </ul>
+            <p>Here's what your console should look like.</p>
             <image src="images/chrome-console-1.png" class="screenshot" />
         </div>
 
         <div class="section" id="selecting-an-element">
             <h3>Selecting an element with jQuery</h3>
-            <p>To select the green box below, simply type this in your console then press "enter":</p>
-            <pre><code>$('#green-box')</code></pre>
-
-            <div id="green-box" class="fixed"></div>
-            
-            <p>You should see something like this</p>
-            <image src="images/green-box-1.png" class="screenshot" />
-
+            <p>To select the green box below, simply type this in your console then press "enter": (yes yes, you need to follow along)</p>
+            <pre id="stop-green-top"><code>$('#green-box')</code></pre>
         </div>
-        <div class="section" id="jquery-api">
-            <h3>Using the jQuery API for Fun</h3>
-            <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.crockford.com/wrrrld/color.html" target="blank">LightSkyBlue</a> color (that's the name of the CSS color)? In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>.</p>
-            <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
-            <p class="protip">Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
-            <p class="protip">Protip numero-dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. Promise!</p>
 
-            <p>Let's now change the border color to a nice <a href="http://www.supernaturalwiki.com/images/1/15/Zoolander.jpg" target="blank">steelblue</a> color. Any guess as to how to do this?</p>
+        <div id="green-box-container">
+            <div id="green-box"></div>
+        </div>
+
+        <div class="section pulled">            
+            <p>Here's what just happened:</p>
+            <ul>
+                <li>"$" - The dollar sign is how we use jQuery, which has already been loaded in this page for you.</li>
+                <li>"'#green-box'" - This is how we select an element with an ID of 'green-box'.</li>
+            </ul>
+
+            <p>You should see something like this, meaning that the element we're selecting is a &lt;div> with an ID of 'green-box'.</p>
+            <image src="images/green-box-1.png" class="screenshot" />
+        </div>
+
+        <div class="section pulled" id="jquery-api">
+            <h3>Using the jQuery API</h3>
+            <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.cssportal.com/css3-color-names/" target="blank">LightSkyBlue</a> color? (That's the name of the CSS color.) In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>. Here's what we'll need to type:</p>
+            <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
+
+            <p>Can you guess what just happened?</p>
+            <ul>
+                <li>"$('#green-box')" - We selected an element with an ID of 'green-box'</li>
+                <li>".css(" - We used jQuery's CSS API</li>
+                <li>"'background-color','lightskyblue'" - We changed the background-color CSS property of this element to a lightskyblue color</li>
+            </ul>
+
+            <p class="protip">Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
+            <p class="protip">Protip dos: Even though you can copy/ paste the sample code provided, I strongly suggest you actually type things out. This will help you learn wayyy more. I Promise.</p>
+
+            <p>Let's now change the border color to a nice <a href="http://www.supernaturalwiki.com/images/1/15/Zoolander.jpg" target="blank">steelblue</a> color. Can you guess how to do this?</p>
             <pre><code>$('#green-box').css('border-color','steelblue')</code></pre>
 
-            <p>Actually, how about we remove the background color? We can do this by setting the background color to 'transparent'.</p>
+            <p>We basically used the same command as above, but instead of changing the background-color we changed the border-color.</p>
+
+            <p>Actually, how about we remove the background color altogether by setting it to 'transparent'?</p>
             <pre><code>$('#green-box').css('background-color','transparent')</code></pre>
 
-            <p>Ready for something amazing? Let's add a hadouken inside our box to see what happens. Good thing we have a nice little hadouken saved up at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. In order to add this to our box we will use jQuery's <a href="http://api.jquery.com/html/" target="blank">HTML</a> api which allows us to add HTML to any given element and we'll add an <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML image</a>.</p>
+            <p>Are you getting the hang of it? See, not as hard as you thought :)</p>
+
+            <p>Ready for something amazing? Let's add a hadouken inside our transparent box.</p>
+
+            <p>We have a hadouken image conveniently saved at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. To add this image to our box we'll use <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML's image tag</a> and use jQuery's <a href="http://api.jquery.com/html/" target="blank">HTML</a> API which allows you to add or change the HTML of any given element.</p>
+
+            <p>Here's how to do this:</p>
             <pre><code>$('#green-box').html('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
 
             <p>Another way to add the hadouken would be to use jQuery's <a href="http://api.jquery.com/append/" target="blank">Append</a> API.</p>
@@ -129,7 +126,7 @@
         </div>
 
         <div class="section" id="end-goal">
-            <h2>Our Small jQuery Project</h2>
+            <h2 id="stop-green-bottom">Our Small jQuery Project</h2>
             <p>By now you should have a basic understanding on how to use jQuery. In order to gain more experience using this amazing library we're going to work on a small project together.... are you ready? We're going to have <a href="https://www.google.com/search?q=ryu+hadouken&tbm=isch" target="blank">Ryu fire a hadouken</a>. Here's what our end project will look like. (Make sure to hover on Ryu and also click on him :)</p>
             <div id="main-example-container" style="width:1300px;">
                 <img id="main-example" src="images/ryu_stand_still.png">
@@ -150,7 +147,7 @@
             <p>Here's what you should see in your console:</p>
             <img src="images/code-along-1.png" class="screenshot">
 
-            <h3>Adding Ryu at stand still</h3>
+            <h3>Adding Ryu at a stand still</h3>
             <p>Now that we have our &lt;div&gt; selected, let's add Ryu at stand still. The image you need is available here: <a href="http://i.imgur.com/JFMYx3j.png" target="blank">http://i.imgur.com/JFMYx3j.png</a></p>
             <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/JFMYx3j.png"&gt;')</code></pre>
             <img src="images/code-along-2.png" class="screenshot">
@@ -232,6 +229,43 @@ $('#my-div img').hover( function() {
         });
         $('#main-example').mouseup(function() {this.src = 'images/ryu_animated_fixed.gif'});    
  -->
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+ <ul>
+     <li><a href="#introduction">Introduction</a></li>
+     <li><a href="#what-is-jquery">What is jQuery</a></li>
+     <li><a href="#installing-jquery">Installing jQuery</a></li>
+     <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
+     <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
+     <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
+     <li><a href="#end-goal">Our Small jQuery Project</a></li>
+     <li><a href="#project-start">Getting Started with Our Project</a></li>
+ </ul>
+
+
+         <div class="section" id="installing-jquery">
+             <h3>How to install jQuery?</h3>
+             <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
+             <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+
+             <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
+             <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+
+             <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
+             <pre><code>&lt;html&gt;
+     &lt;head&gt;
+         &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+         &lt;script src="example.js"&gt;&lt;/script&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+     &lt;!-- Your content goes here -->
+     &lt;/body&gt;
+ &lt;/html&gt;</code></pre>
+             <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
+         </div>
 
 
     </body>

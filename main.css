@@ -123,6 +123,17 @@ h3 {
     width: 200px;
     background-color: #40D47E;
     border: 10px solid #27AE60;
+    display: inline-block;
+    float: left;
+}
+
+.pulled {
+    max-width: 70%;
+    margin-left: 25%;
+}
+
+.pulled .screenshot {
+    max-width: 672px;
 }
 
 p a, ul a{
