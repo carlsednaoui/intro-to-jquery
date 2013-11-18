@@ -22,7 +22,9 @@
 
             <p>To get through this guide you'll need a basic understanding of HTML, CSS and CSS selectors. If you'd like a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>. Also, it's worth mentioning that we're not going to focus on jQuery best practices but instead on we'll focus on getting familiar with jQuery through repetition and step-by-step examples.</p>
 
-            <p>Disclosure: This guide uses Ryu from Street Fighter and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>. Ready? Let's dive in!</p>
+            <p>Disclosure: This guide uses Ryu from Street Fighter and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p> 
+
+            <p>Ready? Let's dive in!</p>
         </div>
 
         <div class="section" id="what-is-jquery">
@@ -35,7 +37,7 @@
 
         <h2>Time to get our hands dirty</h2>
         <div class="section" id="opening-the-console">
-            <p>In this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. Yes, you can use any browser you'd like but I strongly recommend you switch to Chrome to follow along.</p>
+            <p>In this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. Yes, you can use any browser you'd like but I strongly recommend you switch to Chrome to follow along. If you don't have Chrome, you can <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">download it here</a>.</p>
 
             <h3>Opening Chrome's console</h3>
             <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) and see the results right away. Here's how to open the console:</p>
@@ -60,8 +62,8 @@
         <div class="section pulled">            
             <p>Here's what just happened:</p>
             <ul>
-                <li>"$" - The dollar sign is how we use jQuery, which has already been loaded in this page for you.</li>
-                <li>"'#green-box'" - This is how we select an element with an ID of 'green-box'.</li>
+                <li><span class="code-review">$</span> The dollar sign is how we use jQuery, which has already been loaded in this guide for you.</li>
+                <li><span class="code-review">('#green-box')</span> This is how we select an element with an ID of 'green-box'.</li>
             </ul>
 
             <p>You should see something like this, meaning that the element we're selecting is a &lt;div> with an ID of 'green-box'.</p>
@@ -75,9 +77,9 @@
 
             <p>Can you guess what just happened?</p>
             <ul>
-                <li>"$('#green-box')" - We selected an element with an ID of 'green-box'</li>
-                <li>".css(" - We used jQuery's CSS API</li>
-                <li>"'background-color','lightskyblue'" - We changed the background-color CSS property of this element to a lightskyblue color</li>
+                <li><span class="code-review">$('#green-box')</span> We selected an element with an ID of 'green-box'.</li>
+                <li><span class="code-review">.css(</span> We used jQuery's CSS API.</li>
+                <li><span class="code-review">'background-color','lightskyblue' </span> We changed the background-color CSS property of this element to a lightskyblue color.</li>
             </ul>
 
             <p class="protip">Protip: You can use the "up" arrow in your console to get the last command you typed. This will save you tons of time.</p>
@@ -95,27 +97,31 @@
 
             <p>Ready for something amazing? Let's add a hadouken inside our transparent box.</p>
 
-            <p>We have a hadouken image conveniently saved at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. To add this image to our box we'll use <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML's image tag</a> and use jQuery's <a href="http://api.jquery.com/html/" target="blank">HTML</a> API which allows you to add or change the HTML of any given element.</p>
+            <p>We have a hadouken image conveniently saved at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. To add this image to our box we'll use an <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML image tag</a> to create the image and use <a href="http://api.jquery.com/html/" target="blank">jQuery's HTML API</a> to add the image.</p>
 
             <p>Here's how to do this:</p>
             <pre><code>$('#green-box').html('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
 
-            <p>Another way to add the hadouken would be to use jQuery's <a href="http://api.jquery.com/append/" target="blank">Append</a> API.</p>
+            <p>Another way to add the hadouken would be to use <a href="http://api.jquery.com/append/" target="blank">jQuery's Append API</a>.</p>
             <pre><code>$('#green-box').append('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
 
-            <p>Extra credit: Can you guess what happens if you run the 'append' command several times? Now try running the 'html' one several times. I'll let you play with this for a minute....</p>
-
-            <p>Were you able to spot the difference? If you were to say that the 'append' command keeps on appending hadoukens forever while the 'html' command replaces everything with only 1 hadouken you'd be 100% right!</p>
-
+            <p><b>Extra credit:</b> Can you guess what happens if you run the 'append' command several times? Now try running the 'html' one several times. I'll let you play with this for a minute...</p>
+            
             <p class="protip">Protip: Remember that you can use the "up" arrow in your console to go back to a previous command.</p>
+
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+
+            <p>Were you able to spot the difference? If you're about to say that the 'append' command keeps on appending hadoukens forever while the 'html' command replaces everything with only 1 hadouken you'd be 100% right!</p>
 
             <div class="summary">
                 <p>Here's what you learned in this section:</p>
                 <ul>
-                    <li>How to select an element with jQuery</li>
-                    <li>How to use the jQuery CSS api to change the background and border color of an HTML element</li>
-                    <li>How to change the HTML of a given element</li>
-                    <li>How to append HTML to any element</li>
+                    <li>How to select an element with jQuery.</li>
+                    <li>How to use jQuery's CSS API to change the background and border color of an HTML element.</li>
+                    <li>How to change the HTML content of an element.</li>
+                    <li>How to append HTML to an element.</li>
                 </ul>
 
             </div>
