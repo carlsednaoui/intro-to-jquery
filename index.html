@@ -12,7 +12,6 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
         <!-- Google Fonts Ends --> 
 
-
     </head>
     <body>
         <h1>Learning jQuery with Street Fighter and Hadoukens</h1>
@@ -35,11 +34,11 @@
         </div>
 
 
-        <h2>Time to get our hands dirty</h2>
+        <h2>Time to Get Our Hands Dirty</h2>
         <div class="section" id="opening-the-console">
             <p>In this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. Yes, you can use any browser you'd like but I strongly recommend you switch to Chrome to follow along. If you don't have Chrome, you can <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">download it here</a>.</p>
 
-            <h3>Opening Chrome's console</h3>
+            <h3>Opening Chrome's Console</h3>
             <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) and see the results right away. Here's how to open the console:</p>
             <ul>
                 <li>Use the keyboard shortcut Command: Option + J (Mac) or Control + Shift  + J (Windows/Linux).</li>
@@ -50,7 +49,7 @@
         </div>
 
         <div class="section" id="selecting-an-element">
-            <h3>Selecting an element with jQuery</h3>
+            <h3>Selecting an Element with jQuery</h3>
             <p>To select the green box below, simply type this in your console then press "enter": (yes yes, you need to follow along)</p>
             <pre id="stop-green-top"><code>$('#green-box')</code></pre>
         </div>
@@ -128,11 +127,15 @@
         </div>
 
         <div class="section" id="end-goal">
-            <h2 id="stop-green-bottom">Our Small jQuery Project</h2>
-            <p>By now you should have a basic understanding on how to use jQuery. In order to gain more experience using this amazing library we're going to work on a small project together.... are you ready? We're going to have <a href="https://www.google.com/search?q=ryu+hadouken&tbm=isch" target="blank">Ryu fire a hadouken</a>. Here's what our end project will look like. (Make sure to hover on Ryu and also click on him :)</p>
+            <h2 id="stop-green-bottom">Your First jQuery Project</h2>
+            <p>You now have a basic understanding of jQuery. How about we deepen your jQuery chops by working on a small project together? Here's what I propose: Let's make <a href="https://www.google.com/search?q=ryu+hadouken&tbm=isch" target="blank">Ryu fire a hadouken</a>.</p> 
+
+            <p>This is what our end project will look like. (Make sure you hover on Ryu and also click on him :)</p>
+            
             <div id="main-example-container" style="width:960px;">
                 <img id="main-example" src="images/ryu_stand_still.png">
             </div>
+            <div id="main-example-add-sound">Add Hadouken sound</div>
         </div>
 
         <div class="section" id="project-start">
@@ -270,6 +273,7 @@ $('#my-div img').hover( function() {
          </div>
 
 
+        <audio id="hadouken-sound" src="hadouken.mp3">
         <!-- Syntax Highlighting Starts -->
         <link rel="stylesheet" href="syntax-highlighting/tomorrow-night.css">
         <script src="syntax-highlighting/highlight.pack.js"></script>

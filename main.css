@@ -160,6 +160,18 @@ p a, ul a{
     margin-left: -100px;
 }
 
+#main-example-add-sound {
+    background-color: #27AE60;
+    color: #FBFCFC;
+    margin: 20px 46px;
+    display: inline-block;
+    padding: 4px 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 /* Ruy in CSS */
 /*#ruy-css {
     height: 500px;
