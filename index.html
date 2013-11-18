@@ -278,7 +278,7 @@ $('#my-div img').mousedown(function() {
 </code></pre>
 
             <h3>Animating The Hadouken</h3>
-            <p>It's that moment we've all been waiting for... time to make the Hadouken move! Here's how we're going to do this:</p>
+            <p>It's that moment we've all been waiting for... time to make the Hadouken move! For this we'll use <a href="http://api.jquery.com/animate/" target="blank">jQuery's Animate API</a>.</p>
             <pre><code>$('#my-div img').mousedown(function() {
     $('.demo-hadouken').animate( {
         "margin-left": "600px"
@@ -289,11 +289,14 @@ $('#my-div img').mousedown(function() {
 
             <p>And here's what's happening:</p>
             <ul>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">$('#my-div img')</span> First, we select the image that is inside #my-div.</li>
+                <li><span class="code-review">.mousedown(</span> Then use jQuery's Mousedown API.</li>
+                <li><span class="code-review">function() {</span> We then begin our function.</li>
+                <li><span class="code-review">$('.demo-hadouken').animate(</span> Our function selects an element with a Class of 'demo-hadouken' and uses jQuery's animate API.</li>
+                <li><span class="code-review">{ "margin-left": "600px" }, 1000, 'swing'</span> jQuery animate takes a few parameters: the CSS properties we want to change, a time duration (in miliseconds) and the CSS transition type. In this case we're adding 600px of margin on the left over the course of 1000 milisecond (1 second) and we're using the 'swing' transition, which is the default transition.</li>
+                <li><span class="code-review">, function() { this.remove();</span> We then fire a function once the animation has been completed. This function selects 'this' element (referring to the demo-hadouken and removes it.</li>
+                <li><span class="code-review">})</span> We then close our above function.</li>
+                <li><span class="code-review">})</span> Finally we close our Mousedown function.</li>
             </ul>
 
             <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
@@ -321,7 +324,7 @@ $('#my-div img').mousedown(function() {
 </code></pre>
 
             <h3>Getting Ryu Out of The Hadouken Pose</h3>
-            <p>We're almost done! The last thing we'll want to do is make sure that Ryu goes back into his fighting pose after firing the Hadouken.</p>
+            <p>We're almost done! The last thing we'll want to do is make sure that Ryu goes back into his fighting pose after firing the Hadouken. For this we'll use <a href="http://api.jquery.com/mouseup/" target="blank">jQuery's Mouseup API</a>.</p>
 
             <pre><code>$('#my-div img').mouseup(function() {
     this.src = 'http://i.imgur.com/90Mmdcm.png'
@@ -329,11 +332,9 @@ $('#my-div img').mousedown(function() {
 
             <p>And here's what's happening:</p>
             <ul>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
-                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">$('#my-div img')</span> First, we select the image that is inside #my-div.</li>
+                <li><span class="code-review">.mouseup(</span> Then use jQuery's Mouseup API.</li>
+                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/90Mmdcm.png' }</span> We then pass our function. This function will change the src of the image on mouseup (you may notice that this is VERY similar to what we did earlier).</li>
             </ul>
 
             <p class="checkpoint">Final checkpoint: Here's all the code we've written!</p>
