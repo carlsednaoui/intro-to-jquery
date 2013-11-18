@@ -188,6 +188,10 @@ p a, ul a{
     cursor: pointer;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Ruy in CSS */
 /*#ruy-css {
     height: 500px;
