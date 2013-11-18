@@ -170,58 +170,112 @@
             <img src="images/code-along-3.png" class="screenshot">
 
             <h3>Adding our Animated Ryu</h3>
-            <p>When a user hover's over our image, we want to animate Ryu as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/TYvGQPJ.gif" target="blank">http://i.imgur.com/TYvGQPJ.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code you want to execute.</p>
+            <p>When a user hover's over Ryu we want to animate him as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/nTj3Fxx.gif" target="blank">http://i.imgur.com/nTj3Fxx.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code (or logic) you want to execute.</p>
 
-            <p>Just a second ago I mentioned that <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a> can take 1 or 2 functions here's the difference: If you use 1 function, this function will run when a user hovers over the element. That's it. If you use 2 functions, the 1st function will run when the user hovers over the element and the 2nd function will run when the user "un-hovers" (or stops hovering) over the element.</p>
+            <p>Just a second ago I mentioned that <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a> can take 1 or 2 functions here's the difference:</p>
+            <ul>
+                <li>If you use 1 function, this function will run when a user hovers over the element. That's it.</li>
+                <li>If you use 2 functions, the 1st function will run when the user hovers over the element and the 2nd function will run when the user "un-hovers" (or stops hovering) over the element.</li>
+            </ul>
 
-            <p>For this example we'll need to use 2 functions. The first function will change Ryu from a stand still position to an animated one. The second function (which will run when the user stops hovering over our image) will change Ryu from an animated position back to a stand still one.</p>
+            <p>Right now we'll need to use 2 functions. The first function will change Ryu from a stand still position to an animated one. The second function (which will run when the user stops hovering over our image) will change Ryu from an animated position back to a stand still one.</p>
 
-            <p>Below is the code you need to run.</p>
-            <p>Quick note: Since you're using your console, it's easier to type all of this code in one long line. But, if you prefer to use several lines, you can also hit "option" + "enter" on a Mac to get a new line. Just like before, to run your code simply hit "enter".</p>
+            <p>Below's the code you need to run.</p>
+            <p>Quick note: Since you're using your console, it's easier to type all this code in one long line. But, if you prefer to use several lines, you can also hit "option" + "enter" on a Mac to get a new line. Once you're done typing everything hit "enter".</p>
             <pre><code>$('#my-div img').hover( function() {
-    this.src = 'http://i.imgur.com/TYvGQPJ.gif'
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
-    this.src = 'http://i.imgur.com/JFMYx3j.png'
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
 })</code></pre>
             <p>Let's go over what's happening in the above block of code.</p>
             <ul>
-                <li>"$('#my-div img')" - First, we select the image that is inside #my-div.</li>
-                <li>".hover(" - Then use jQuery's hover API.</li>
-                <li>"function() { this.src = 'http://i.imgur.com/TYvGQPJ.gif' }" - We then pass our first function. All this is saying is that we'll change the source (or, as said in HTMl, the "src") for this" element. The "this" here refers to the image inside our div, which we selected 2 steps ago. Here's a detailed explanation on using <a href="http://stackoverflow.com/questions/3127429/javascript-this-keyword" target="blank">"this"</a> in JavaScript and jQuery (a tricky concept).</li>
-                <li>"," - Is used to separate our functions.</li>
-                <li>"function() { this.src = 'http://i.imgur.com/JFMYx3j.png' }" - Lastly we pass our second function, which does the same as our previous function, but with a different image.</li>
+                <li><span class="code-review">$('#my-div img')</span> First, we select the image that is INSIDE #my-div.</li>
+                <li><span class="code-review">.hover(</span> Then we use jQuery's hover API.</li>
+                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/TYvGQPJ.gif' }</span> We then pass our first function. All this is saying is that we'll change the source (or, as said in HTML, the 'src') for 'this' element. The 'this' here refers to the image inside our &lt;div>, which we selected 2 steps ago. Here's a detailed explanation on using <a href="http://stackoverflow.com/questions/3127429/javascript-this-keyword" target="blank">'this'</a> in JavaScript and jQuery (a tricky concept).</li>
+                <li><span class="code-review">,</span> Is used to separate our functions.</li>
+                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/JFMYx3j.png' }</span> Finally, we pass our second function which does the same thing as our previous function but with a different image.</li>
             </ul>
 
-            <p>Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your terminal if you get stuck or refresh the page.</p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/JFMYx3j.png"&gt;')
+            <p>If you hover over Ryu now he should start jumping up and down.</p>
+
+            <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
-    this.src = 'http://i.imgur.com/TYvGQPJ.gif'
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
-    this.src = 'http://i.imgur.com/JFMYx3j.png'
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
 })
 </code></pre>
 
-            <p>It's totally ok to feel slightly confused right now. If you keep reading this guide you'll get the hang of it. We still have a bit more to do, giving us plenty of time to practice. Here's what coming next:</p>
+            <p>Side note: It's totally ok to feel slightly confused right now. If you keep reading this guide you'll get the hang of it. We still have a bit more to do, giving us plenty of time to practice. Here's what coming next:</p>
             <ul>
-                <li>Add the Hadouken pose when a user clicks on Ryu</li>
-                <li>Add the Hadouken next to Ryu</li>
-                <li>Make the Hadouken move</li>
-                <li>Get Ryu out of the Hadouken pose</li>
-                <li>Remove the Hadouken once it's done moving</li>
+                <li>Adding the Hadouken pose when a user clicks on Ryu</li>
+                <li>Adding the Hadouken next to Ryu</li>
+                <li>Making the Hadouken move</li>
+                <li>Getting Ryu out of the Hadouken pose</li>
+                <li>Removing the Hadouken once it's done moving</li>
             </ul>
 
             <h3>The Hadouken Pose</h3>
-            <p>We now want to change Ryu's pose when someone clicks on him. To do this we'll use <a href="http://api.jquery.com/mousedown/" target="blank">jQuery's Mousedown API</a>. Mousedown only takes 1 function and it will allow us to trigger this function whenever the user presses down on their mouse. Here's how to use it:</p>
-            <pre><code>$('#my-div img').mousedown( function() {this.src = 'http://i.imgur.com/1F4rSOc.png' });</code></pre>
+            <p>We now want to change Ryu's pose when someone clicks on him. To do this we'll use <a href="http://api.jquery.com/mousedown/" target="blank">jQuery's Mousedown API</a>. Mousedown only takes 1 function which gets triggered whenever somebody clicks on the desired element. Here's how to use it:</p>
+            <pre><code>$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})</code></pre>
             
             <p>And here's what's happening:</p>
             <ul>
-                <li>"$('#my-div img')" - First, we select the image that is inside #my-div.</li>
-                <li>".mousedown(" - Then use jQuery's Mousedown API.</li>
-                <li>"function() { this.src = 'http://i.imgur.com/1F4rSOc.png' }" - We then pass our function which will change the src of the image. This is VERY similar to what we did earlier.
+                <li><span class="code-review">$('#my-div img')</span> First, we select the image that is inside #my-div.</li>
+                <li><span class="code-review">.mousedown(</span> Then use jQuery's Mousedown API.</li>
+                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/Rfj0a80.png' }</span> We then pass our function. This function will change the src of the image on mousedown (you may notice that this is VERY similar to what we did earlier).
             </ul>
+            <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})
+</code></pre>
 
             <h3>Adding The Hadouken</h3>
+            <p>Let's add the Hadouken, which is available at <a href="http://i.imgur.com/oTyQRvX.gif" target="blank">http://i.imgur.com/oTyQRvX.gif</a>.</p>
+            <p>This will be very similar to what we just did above but instead of changing the source of an image we will be appending an element next to Ryu. The element we're appending is an image, with a class of 'demo-hadouken'. Adding this class ensures that the Hadouken is aligned with Ryu's hands (I've taken care of the CSS for you).</p>
+            <pre><code>$('#my-div img').mousedown(function() {
+    $('#my-div').append(
+    '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
+    );
+})</code></pre>
+
+            <p>And here's what's happening:</p>
+            <ul>
+                <li><span class="code-review">$('#my-div img')</span> First, we select the image that is inside #my-div.</li>
+                <li><span class="code-review">.mousedown(</span> Then use jQuery's Mousedown API.</li>
+                <li><span class="code-review">function() {</span> We then begin writing our function.</li>
+                <li><span class="code-review">$('#my-div').append(</span> When our function runs we're going to select #my-div and append something to it.</li>
+                <li><span class="code-review">'&lt;img class='demo-hadouken' src="http://i.imgur.com/oTyQRvX.gif">'</span> That something happens to be an image with a class of "demo-hadouken" and a src of "http://i.imgur.com/oTyQRvX.gif". Notice that both the class and the src are using double quotes "", that's because <a href="http://en.wikipedia.org/wiki/Nested_quotation" target="blank">we're nesting them</a>.</li>
+                <li><span class="code-review">);</span> We then close our append function.</li>
+                <li><span class="code-review">})</span> We then close our mousedown function.</li>
+            </ul>
+
+            <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
+                        <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})
+$('#my-div img').mousedown(function() {
+    $('#my-div').append(
+    '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
+    );
+})
+</code></pre>
 
             <h3>Animating The Hadouken</h3>
 
@@ -232,8 +286,7 @@ $('#my-div img').hover( function() {
         
 
 <!-- 
-        $('#my-div img').mousedown(function() {this.src = 'images/ryu_hadoken_pose_fixed.png'});
-        $('#my-div img').mousedown(function() {$('#my-div').append('<img class="demo-hadouken moving-hadouken" src="images/hadouken.gif" class="moving-hadouken">');});
+        
         $('#my-div img').mousedown(function() {
           $('.moving-hadouken').animate({"margin-left": "600px"}, 1000, 'swing', function() {
             this.remove();

@@ -158,11 +158,15 @@ p a, ul a{
     font-style: italic;
 }
 
+.checkpoint {
+    color: #27AE60;
+}
+
 /* jQuery project demo */
 .demo-hadouken {
     vertical-align: top;
-    margin-top: 140px; 
-    margin-left: -100px;
+    margin-top: 55px; 
+    margin-left: -55px;
 }
 
 #main-example-add-sound {
