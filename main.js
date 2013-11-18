@@ -1,39 +1,28 @@
 $( document ).ready(function() {
-  // Green box logic
-  $('#green-box-container').waypoint(function(direction) {
-    if (direction == 'down') {
-      $('#green-box-container').css({'position': 'fixed', 'top': '10px'});
-    } else {
-      $('#green-box-container').css({'position': 'inherit'});
-    }
+  $(window).on('scroll', function() {
+    var y_scroll_pos   = window.pageYOffset,
+        greenBox       = $('#green-box-container').position().top,
+        greenBoxTop    = $('#stop-green-top').position().top + 100,
+        greenBoxBottom = $('#stop-green-bottom').position().top - 220;
+
+    if (y_scroll_pos > greenBox)
+        $('#green-box-container').css({'position': 'fixed', 'top': '10px'});
+
+    if (y_scroll_pos < greenBoxTop)
+        $('#green-box-container').css({'position': 'inherit'});
+
+    if (y_scroll_pos > greenBoxBottom)
+        $('#green-box-container').css({'position': 'absolute'});
   });
 
-  $('#stop-green-bottom').waypoint(function(direction) {
-    if (direction == 'down') {
-      $('#green-box-container').css({'position': 'absolute'});
-    } else {
-      $('#green-box-container').css({'position': 'fixed', 'top': '10px'});
-    }
-  }, { offset: 220 });
-
-  $(window).on('resize', function() {
-    $.waypoints('refresh');
-  });
-
-  $('h1, h2, h3, p, img, ul, li').each(function(i, el) {
-    var height  = Math.round($(el).offset().top),
-        _window = $(window).height(),
-        start   = height - (_window - 200),
-        end     = height - (Math.round(_window * .6));
-
-    $(el).attr('data-' + start, 'opacity:0;');
-    $(el).attr('data-' + end, 'opacity:1;');
-  });
-
+  
   // Skrollr logic
-  skrollr.init({
-    smoothScrolling: true
+  $('h1, h2, h3, p, ul, li, pre, code').each(function(i, el) {
+    $(el).attr('data-100-bottom', 'opacity:0;');
+    $(el).attr('data-center-center', 'opacity:1;');
   });
+
+  skrollr.init();
 
 
   // jQuery project demo
@@ -47,4 +36,5 @@ $( document ).ready(function() {
     });
   });
   $('#main-example').on('mouseup', function() {this.src = 'images/ryu_animated.gif'});
+
 });
