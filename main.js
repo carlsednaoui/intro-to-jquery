@@ -49,7 +49,7 @@ $( document ).ready(function() {
   $('#main-example').hover(function() {this.src = 'images/ryu_animated.gif'}, function() {this.src = 'images/ryu_stand_still.png'});
   $('#main-example').on('mousedown', function() {this.src = 'images/ryu_hadoken_pose.png'});
   $('#main-example').on('mousedown', function() {$('.moving-hadouken').remove();});
-  $('#main-example').on('mousedown', function() {$('#main-example-container').append('<img class="demo-hadouken moving-hadouken" src="images/hadouken.gif" class="moving-hadouken">');});
+  $('#main-example').on('mousedown', function() {$('#main-example-container').append('<img class="moving-hadouken" src="images/hadouken.gif" >');});
   $('#main-example').on('mousedown', function() {
     if (playHadouken)
       $('#hadouken-sound')[0].play();
@@ -62,6 +62,5 @@ $( document ).ready(function() {
   $('#main-example-add-sound').on('click', function() {
     playHadouken = true;
     $(this).html('Sound added, click on Ryu');
-  });
-
+  });s
 });

@@ -162,6 +162,13 @@ p a, ul a{
     color: #27AE60;
 }
 
+.moving-hadouken {
+    vertical-align: top;
+    margin-top: 140px; 
+    margin-left: -100px;
+}
+
+
 /* jQuery project demo */
 .demo-hadouken {
     vertical-align: top;
