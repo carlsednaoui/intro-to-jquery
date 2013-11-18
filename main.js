@@ -16,6 +16,25 @@ $( document ).ready(function() {
     }
   }, { offset: 220 });
 
+  $(window).on('resize', function() {
+    $.waypoints('refresh');
+  });
+
+  $('h1, h2, h3, p, img, ul, li').each(function(i, el) {
+    var height  = Math.round($(el).offset().top),
+        _window = $(window).height(),
+        start   = height - (_window - 200),
+        end     = height - (Math.round(_window * .6));
+
+    $(el).attr('data-' + start, 'opacity:0;');
+    $(el).attr('data-' + end, 'opacity:1;');
+  });
+
+  // Skrollr logic
+  skrollr.init({
+    smoothScrolling: true
+  });
+
 
   // jQuery project demo
   $('#main-example').hover(function() {this.src = 'images/ryu_animated.gif'}, function() {this.src = 'images/ryu_stand_still.png'});

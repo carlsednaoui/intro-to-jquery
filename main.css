@@ -83,7 +83,10 @@ h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
 }
 
 h3 {
