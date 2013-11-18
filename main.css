@@ -58,27 +58,27 @@ table {
 
 body {
     margin: 50px auto;
-    width: 960px;
-    /*background-color: #4AA3DF;*/
-    background: url('images/bcg.png');
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    width: 850px;
+    font-family: 'PT Serif', serif;
+    color: #4E4E4E;
     font-weight: 300;
     font-size: 1.1em;
-    line-height: 1.3em;
+    line-height: 1.6em;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
     color: #2C3E50;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 1.2em;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    margin: 40px 0;
+    margin: 2em 0;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: #2C3E50;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -87,7 +87,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #2C3E50;
     font-family: 'Lato', sans-serif;
     margin-top: 30px;
@@ -112,15 +112,15 @@ h3 {
 }
 
 .screenshot {
-    max-width: 960px;
+    max-width: 100%;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
 
 #green-box {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     background-color: #40D47E;
     border: 10px solid #27AE60;
     display: inline-block;
@@ -130,10 +130,6 @@ h3 {
 .pulled {
     max-width: 70%;
     margin-left: 25%;
-}
-
-.pulled .screenshot {
-    max-width: 672px;
 }
 
 p a, ul a{
