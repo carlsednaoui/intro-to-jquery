@@ -1,0 +1,221 @@
+******************************
+-> CSS reset
+*******************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*******************************
+-> Main styles
+*******************************/
+
+body {
+    margin: 50px auto;
+    width: 850px;
+    font-family: 'PT Serif', serif;
+    color: #4E4E4E;
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    color: #2C3E50;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin: 2em 0;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #2C3E50;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #2C3E50;
+    font-family: 'Lato', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.section {
+    margin: 30px 0;
+}
+
+.section p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    list-style: disc;
+    font-size: .9em
+}
+
+.screenshot {
+    max-width: 100%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+#green-box {
+    height: 150px;
+    width: 150px;
+    background-color: #40D47E;
+    border: 10px solid #27AE60;
+    display: inline-block;
+    float: left;
+}
+
+#my-div {
+    display: inline-block;
+    float: left;   
+}
+
+.code-review {
+    color: #EA6153;
+}
+
+.code-review:after {
+    content: " ";
+}
+
+.pulled {
+    max-width: 70%;
+    margin-left: 25%;
+}
+
+p a, ul a{
+    color: #2E8ECE;
+    text-decoration: none;
+}
+
+.protip {
+    color: #3D566E;
+    font-style: italic;
+}
+
+.checkpoint {
+    color: #27AE60;
+}
+
+.moving-hadouken {
+    vertical-align: top;
+    margin-top: 140px; 
+    margin-left: -100px;
+}
+
+
+/* jQuery project demo */
+.demo-hadouken {
+    vertical-align: top;
+    margin-top: 55px; 
+    margin-left: -55px;
+}
+
+#main-example-add-sound {
+    background-color: #27AE60;
+    color: #FBFCFC;
+    margin: 20px 46px;
+    display: inline-block;
+    padding: 4px 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Ruy in CSS */
+/*#ruy-css {
+    height: 500px;
+    width: 500px;
+    background: url('images/ruy_stand_still.png') no-repeat;
+}
+
+#ruy-css:hover {
+    background: url('images/ruy_animated.gif') no-repeat;
+}
+
+#ruy-css:active {
+    background: url('images/ryu_hadoken_pose.png') no-repeat;
+}
+
+#ruy-css:active img {
+    visibility: visible;
+    -webkit-animation: moveLeft 1s linear;
+}
+
+#ruy-css img {
+    margin-top: 65px;
+    margin-left: 390px;
+    visibility: hidden;
+}
+
+
+@-webkit-keyframes moveLeft {
+    0%   {margin-left:390px;}
+    100%  {margin-left:1000px;}
+}
