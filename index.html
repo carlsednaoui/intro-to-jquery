@@ -278,59 +278,170 @@ $('#my-div img').mousedown(function() {
 </code></pre>
 
             <h3>Animating The Hadouken</h3>
+            <p>It's that moment we've all been waiting for... time to make the Hadouken move! Here's how we're going to do this:</p>
+            <pre><code>$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').animate( {
+        "margin-left": "600px"
+    }, 1000, 'swing', function() {
+        this.remove();
+    })
+})</code></pre>
 
-            <h3>Getting Ryu out of the Hadouken Pose</h3>
+            <p>And here's what's happening:</p>
+            <ul>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+            </ul>
+
+            <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})
+$('#my-div img').mousedown(function() {
+    $('#my-div').append(
+    '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
+    );
+})
+$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').animate( {
+        "margin-left": "600px"
+    }, 1000, 'swing', function() {
+        this.remove();
+    })
+})
+</code></pre>
+
+            <h3>Getting Ryu Out of The Hadouken Pose</h3>
+            <p>We're almost done! The last thing we'll want to do is make sure that Ryu goes back into his fighting pose after firing the Hadouken.</p>
+
+            <pre><code>$('#my-div img').mouseup(function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})</code></pre>
+
+            <p>And here's what's happening:</p>
+            <ul>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+                <li><span class="code-review">foo</span> bar.</li>
+            </ul>
+
+            <p class="checkpoint">Final checkpoint: Here's all the code we've written!</p>
+            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})
+$('#my-div img').mousedown(function() {
+    $('#my-div').append(
+    '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
+    );
+})
+$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').animate( {
+        "margin-left": "600px"
+    }, 1000, 'swing', function() {
+        this.remove();
+    })
+})
+$('#my-div img').mouseup(function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+</code></pre>
+        
+        <h3>Extra Credit</h3>
+        <p>If you click on Ryu 100 times really fast you'll notice that Hadoukens start firing everywhere. While this looks really cool, this is an unintended effect which is happening because we're not removing existing Hadoukens before adding new ones. To fix this we need to enter the code below BEFORE we fire new Hadoukens.</p>
+
+        <pre><code>$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').remove();
+})</code></pre>
+        <p>Note: Just adding the code above will make Ryu STOP firing Hadoukens. That's because our events are in the WRONG order. Take a look at the code below, where everything is happening in the right order.</p>
+
+        <h3>The Full Code</h3>
+        <pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+$('#my-div img').hover( function() {
+    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+}, function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+$('#my-div img').mousedown( function() {
+    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+})
+$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').remove();
+})
+$('#my-div img').mousedown(function() {
+    $('#my-div').append(
+    '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
+    );
+})
+$('#my-div img').mousedown(function() {
+    $('.demo-hadouken').animate( {
+        "margin-left": "600px"
+    }, 1000, 'swing', function() {
+        this.remove();
+    })
+})
+$('#my-div img').mouseup(function() {
+    this.src = 'http://i.imgur.com/90Mmdcm.png'
+})
+</code></pre>
+
         </div>
 
-        <h3 id="stop-div-container-bottom">Using jQuery Animate on a Hadouken</h3>
-        
+        <div id="stop-div-container-bottom"></div>
 
-<!-- 
-        
-        $('#my-div img').mousedown(function() {
-          $('.moving-hadouken').animate({"margin-left": "600px"}, 1000, 'swing', function() {
-            this.remove();
-          });
-        });
-        $('#main-example').mouseup(function() {this.src = 'images/ryu_animated_fixed.gif'});    
- -->
+        <div class="section">
+            <p>Thank you so much for reading this guide, I hope you had as much fun as I did. If you want to add the Hadouken sound feel free to dive into <a href="http://www.thinkful.com/learn/html5-audio-tag-tutorial" target="blank">Thinkful's HTML5 Audio Guide</a>.</p>
+        </div>
 
+        <div class="appendix">
+            <div class="section" id="installing-jquery">
+                <h2>Appendix</h2>
+                <h3>How to install jQuery?</h3>
+                <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
+                <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
 
+                <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
+                <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
- <ul>
-     <li><a href="#introduction">Introduction</a></li>
-     <li><a href="#what-is-jquery">What is jQuery</a></li>
-     <li><a href="#installing-jquery">Installing jQuery</a></li>
-     <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
-     <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
-     <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
-     <li><a href="#end-goal">Our Small jQuery Project</a></li>
-     <li><a href="#project-start">Getting Started with Our Project</a></li>
- </ul>
-
-
-         <div class="section" id="installing-jquery">
-             <h3>How to install jQuery?</h3>
-             <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
-             <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
-
-             <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
-             <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
-
-             <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
-             <pre><code>&lt;html&gt;
-     &lt;head&gt;
-         &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
-         &lt;script src="example.js"&gt;&lt;/script&gt;
-     &lt;/head&gt;
-     &lt;body&gt;
-     &lt;!-- Your content goes here -->
-     &lt;/body&gt;
- &lt;/html&gt;</code></pre>
-             <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
-         </div>
+                <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
+                <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="example.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Your content goes here -->
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#what-is-jquery">What is jQuery</a></li>
+            <li><a href="#installing-jquery">Installing jQuery</a></li>
+            <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
+            <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
+            <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
+            <li><a href="#end-goal">Our Small jQuery Project</a></li>
+            <li><a href="#project-start">Getting Started with Our Project</a></li>
+        </ul>
 
 
         <audio id="hadouken-sound" src="hadouken.mp3">
