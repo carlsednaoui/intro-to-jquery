@@ -130,6 +130,11 @@ h3 {
     float: left;
 }
 
+#my-div {
+    display: inline-block;
+    float: left;   
+}
+
 .code-review {
     color: #EA6153;
 }

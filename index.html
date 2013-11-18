@@ -142,19 +142,26 @@
             <h2>Getting Started with Our Project</h2>
             <p>Here's what we need to achieve this project:</p>
             <ul>
-                <li>Our 4 images. Including: Ryu at a stand still, Ryu animated, Ryu in the Hadouken pose and our famous Hadouken.</li>
+                <li>Our 4 images. Including: Ryu at a stand still, Ryu animated, Ryu in the Hadouken position and our famous Hadouken.</li>
                 <li>An empty &lt;div&gt; which we'll be working from.</li>
             </ul>
-            <p>Luckily for you, I've included a nice little &lt;div&gt; below with an ID of 'my-div' (pardon the lack of originality). You already know how to select this div, don't know? Below's the code just in case you want to double check.</p>
+            <p>Luckily for you, I've created an empty &lt;div&gt; below with an ID of 'my-div' (pardon the lack of originality). You already know how to select this div, don't know? Here's the code just in case:</p>
             <pre><code>$('#my-div')</code></pre>
 
-            <div id="my-div"></div>
-            <p>Here's what you should see in your console:</p>
+            <p>You should see this in your console:</p>
             <img src="images/code-along-1.png" class="screenshot">
 
-            <h3>Adding Ryu at a stand still</h3>
-            <p>Now that we have our &lt;div&gt; selected, let's add Ryu at stand still. The image you need is available here: <a href="http://i.imgur.com/JFMYx3j.png" target="blank">http://i.imgur.com/JFMYx3j.png</a></p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/JFMYx3j.png"&gt;')</code></pre>
+            <h3>Adding Ryu at a Stand Still</h3>
+            <p>Now that we have our &lt;div&gt; selected, let's add Ryu at a stand still. The image you need is available here: <a href="http://i.imgur.com/90Mmdcm.png" target="blank">http://i.imgur.com/90Mmdcm.png</a></p>
+            <pre><code id="stop-div-container-top">$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')</code></pre>
+
+        </div>
+            <div id="my-div-container">
+                <div id="my-div"></div>
+            </div>
+
+        <div class="section pulled">
+
             <img src="images/code-along-2.png" class="screenshot">
             
             <p class="protip">Protip: If you type the wrong command and don't know how to go back to where we were, you can simple refresh this page and start over. Remember the "up" arrow shortcut in the console :)</p>
@@ -162,7 +169,7 @@
             <p>Quick side note: You'll notice that our last line of code has a little "&#9654;". This means that there's more details to be found in there. If you click on that line you should see the &lt;div&gt; expand and reveal our newly added image, like so:</p>
             <img src="images/code-along-3.png" class="screenshot">
 
-            <h3>Adding our animated Ryu</h3>
+            <h3>Adding our Animated Ryu</h3>
             <p>When a user hover's over our image, we want to animate Ryu as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/TYvGQPJ.gif" target="blank">http://i.imgur.com/TYvGQPJ.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code you want to execute.</p>
 
             <p>Just a second ago I mentioned that <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a> can take 1 or 2 functions here's the difference: If you use 1 function, this function will run when a user hovers over the element. That's it. If you use 2 functions, the 1st function will run when the user hovers over the element and the 2nd function will run when the user "un-hovers" (or stops hovering) over the element.</p>
@@ -221,7 +228,7 @@ $('#my-div img').hover( function() {
             <h3>Getting Ryu out of the Hadouken Pose</h3>
         </div>
 
-        <h3>Using jQuery Animate on a Hadouken</h3>
+        <h3 id="stop-div-container-bottom">Using jQuery Animate on a Hadouken</h3>
         
 
 <!-- 
