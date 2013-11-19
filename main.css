@@ -69,12 +69,10 @@ body {
 
 h1 {
     color: #2C3E50;
-    text-align: center;
     font-size: 2em;
-    line-height: 1.2em;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    margin: 2em 0;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -95,6 +93,28 @@ h3 {
     font-family: 'Lato', sans-serif;
     margin-top: 30px;
     margin-bottom: 15px;
+}
+
+.logo {
+    display: block;
+    margin: 40px auto;
+}
+
+.author {
+    font-size: .9em;
+    color: #354B60;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.author a {
+    text-decoration: none;
+    color: #354B60;
+    padding-bottom: 2px;
+}
+
+.author a:hover {
+    border-bottom: 1px solid #354B60;
 }
 
 .section {
