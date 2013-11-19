@@ -36,8 +36,8 @@ $( document ).ready(function() {
   
   // Skrollr logic
   $('h1, h2, h3, p, ul, li, pre, code').each(function(i, el) {
-    $(el).attr('data-100-bottom', 'opacity:0;');
-    $(el).attr('data-center-center', 'opacity:1;');
+    $(el).attr('data-bottom-top', 'opacity:0;');
+    $(el).attr('data--20-top', 'opacity:1;');
   });
 
   skrollr.init();
