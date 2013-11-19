@@ -16,17 +16,17 @@
     <body>
         <h1>Learning jQuery with Street Fighter and Hadoukens</h1>
         
-        <div class="section" id="introduction">
-            <p>Through this interactive guide you'll gain a basic understanding of jQuery and how to use it on your own projects. You'll learn how to select elements, how to modify them and we'll even get to use some really cool jQuery animations.</p>
+        <div class="section">
+            <p>Through this interactive guide you'll gain a basic understanding of jQuery and how to use it on your own projects. You'll learn to select elements, modify them and we'll even get to use some really cool jQuery animations.</p>
 
-            <p>To get through this guide you'll need a basic understanding of HTML, CSS and CSS selectors. If you'd like a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>. Also, it's worth mentioning that we're not going to focus on jQuery best practices but instead on we'll focus on getting familiar with jQuery through repetition and step-by-step examples.</p>
+            <p>To get through this guide you'll need a basic understanding of HTML, CSS and CSS selectors. If you'd like a refresher on these topics you can use <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro" target="blank">Shay's intro to CSS & HTML</a>. Also, it's worth mentioning that we're going to learn jQuery through repetition and step-by-step examples and won't be focusing on best practices.</p>
 
             <p>Disclosure: This guide uses Ryu from Street Fighter and his world famous Hadoukens. As you can imagine, both Ryu and his Hadoukens are trademarks of <a href="http://www.capcom.com/" target="blank">Capcom</a>.</p> 
 
             <p>Ready? Let's dive in!</p>
         </div>
 
-        <div class="section" id="what-is-jquery">
+        <div class="section">
             <h2>What is jQuery</h2>
             <p>A said on jQuery.com: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling..."</p>
 
@@ -35,8 +35,8 @@
 
 
         <h2>Time to Get Our Hands Dirty</h2>
-        <div class="section" id="opening-the-console">
-            <p>In this guide we'll be using <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">Google Chrome's</a> <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">console</a>. Yes, you can use any browser you'd like but I strongly recommend you switch to Chrome to follow along. If you don't have Chrome, you can <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">download it here</a>.</p>
+        <div class="section">
+            <p>In this guide we'll be using <a href="https://developers.google.com/chrome-developer-tools/docs/console" target="blank">Google Chrome's console</a>. Yes, you can use any browser you like but I strongly recommend you switch to Chrome to follow along. If you don't have Chrome, you can <a href="https://www.google.com/intl/en/chrome/browser/" target="blank">download it here</a>.</p>
 
             <h3>Opening Chrome's Console</h3>
             <p>Google Chrome gives you access to this thing called the "console". The console allows you to write JavaScript (and, in our case, jQuery) and see the results right away. Here's how to open the console:</p>
@@ -48,7 +48,7 @@
             <image src="images/chrome-console-1.png" class="screenshot" />
         </div>
 
-        <div class="section" id="selecting-an-element">
+        <div class="section">
             <h3>Selecting an Element with jQuery</h3>
             <p>To select the green box below, simply type this in your console then press "enter": (yes yes, you need to follow along)</p>
             <pre id="stop-green-top"><code>$('#green-box')</code></pre>
@@ -62,16 +62,16 @@
             <p>Here's what just happened:</p>
             <ul>
                 <li><span class="code-review">$</span> The dollar sign is how we use jQuery, which has already been loaded in this guide for you.</li>
-                <li><span class="code-review">('#green-box')</span> This is how we select an element with an ID of 'green-box'.</li>
+                <li><span class="code-review">('#green-box')</span> This is how we select an element with an ID of 'green-box'. Here's a good <a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" target="blank">CSS Selector</a> refresher, in case you need it.</li>
             </ul>
 
             <p>You should see something like this, meaning that the element we're selecting is a &lt;div> with an ID of 'green-box'.</p>
             <image src="images/green-box-1.png" class="screenshot" />
         </div>
 
-        <div class="section pulled" id="jquery-api">
+        <div class="section pulled">
             <h3>Using the jQuery API</h3>
-            <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.cssportal.com/css3-color-names/" target="blank">LightSkyBlue</a> color? (That's the name of the CSS color.) In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>. Here's what we'll need to type:</p>
+            <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.cssportal.com/css3-color-names/" target="blank">LightSkyBlue</a> color? (That's the name of the CSS color.) In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>. Here's what you need to type:</p>
             <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
 
             <p>Can you guess what just happened?</p>
@@ -126,7 +126,7 @@
             </div>
         </div>
 
-        <div class="section" id="end-goal">
+        <div class="section">
             <h2 id="stop-green-bottom">Your First jQuery Project</h2>
             <p>You now have a basic understanding of jQuery. How about we deepen your jQuery chops by working on a small project together? Here's what I propose: Let's make <a href="https://www.google.com/search?q=ryu+hadouken&tbm=isch" target="blank">Ryu fire a hadouken</a>.</p> 
 
@@ -138,7 +138,7 @@
             <div id="main-example-add-sound">Add Hadouken sound</div>
         </div>
 
-        <div class="section" id="project-start">
+        <div class="section">
             <h2>Getting Started with Our Project</h2>
             <p>Here's what we need to achieve this project:</p>
             <ul>
@@ -152,7 +152,7 @@
             <img src="images/code-along-1.png" class="screenshot">
 
             <h3>Adding Ryu at a Stand Still</h3>
-            <p>Now that we have our &lt;div&gt; selected, let's add Ryu at a stand still. The image you need is available here: <a href="http://i.imgur.com/90Mmdcm.png" target="blank">http://i.imgur.com/90Mmdcm.png</a></p>
+            <p>Now that we know we can select our &lt;div&gt;, let's add Ryu at a stand still. The image you need is available here: <a href="http://i.imgur.com/90Mmdcm.png" target="blank">http://i.imgur.com/90Mmdcm.png</a></p>
             <pre><code id="stop-div-container-top">$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')</code></pre>
 
         </div>
@@ -164,13 +164,11 @@
 
             <img src="images/code-along-2.png" class="screenshot">
             
-            <p class="protip">Protip: If you type the wrong command and don't know how to go back to where we were, you can simple refresh this page and start over. Remember the "up" arrow shortcut in the console :)</p>
-
-            <p>Quick side note: You'll notice that our last line of code has a little "&#9654;". This means that there's more details to be found in there. If you click on that line you should see the &lt;div&gt; expand and reveal our newly added image, like so:</p>
+            <p>Side note: You'll notice that our last line of code has a little "&#9654;". This means that there's more details hidden. If you click on that icon you should see the &lt;div&gt; expand, which will reveal our newly added image:</p>
             <img src="images/code-along-3.png" class="screenshot">
 
             <h3>Adding our Animated Ryu</h3>
-            <p>When a user hover's over Ryu we want to animate him as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/nTj3Fxx.gif" target="blank">http://i.imgur.com/nTj3Fxx.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code (or logic) you want to execute.</p>
+            <p>When a user hover's over Ryu, we want to animate him as if he was ready to fight. Here is the gif we'll need: <a href="http://i.imgur.com/nTj3Fxx.gif" target="blank">http://i.imgur.com/nTj3Fxx.gif</a>. To achieve this we'll use <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a>, which can take 1 or 2 functions. Functions you say? What is THAT? Well... a function is basically a block of code (or logic) you want to execute.</p>
 
             <p>Just a second ago I mentioned that <a href="http://api.jquery.com/hover/" target="blank">jQuery's Hover API</a> can take 1 or 2 functions here's the difference:</p>
             <ul>
@@ -178,15 +176,18 @@
                 <li>If you use 2 functions, the 1st function will run when the user hovers over the element and the 2nd function will run when the user "un-hovers" (or stops hovering) over the element.</li>
             </ul>
 
-            <p>Right now we'll need to use 2 functions. The first function will change Ryu from a stand still position to an animated one. The second function (which will run when the user stops hovering over our image) will change Ryu from an animated position back to a stand still one.</p>
+            <p>In our example, now we'll need to use 2 functions. The first function will change Ryu from a stand still position to an animated one when somebody hovers over him. The second function (which will run when the user stops hovering over the image) will change Ryu from an animated position back to a stand still one.</p>
 
             <p>Below's the code you need to run.</p>
             <p>Quick note: Since you're using your console, it's easier to type all this code in one long line. But, if you prefer to use several lines, you can also hit "option" + "enter" on a Mac to get a new line. Once you're done typing everything hit "enter".</p>
-            <pre><code>$('#my-div img').hover( function() {
+<pre><code>$('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
     this.src = 'http://i.imgur.com/90Mmdcm.png'
 })</code></pre>
+
+            <p>Don't worries if your code got messed up, there's a checkpoint a few scrolls away.</p>
+
             <p>Let's go over what's happening in the above block of code.</p>
             <ul>
                 <li><span class="code-review">$('#my-div img')</span> First, we select the image that is INSIDE #my-div.</li>
@@ -199,7 +200,8 @@
             <p>If you hover over Ryu now he should start jumping up and down.</p>
 
             <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -207,18 +209,21 @@ $('#my-div img').hover( function() {
 })
 </code></pre>
 
+            <p class="protip">Protip: If you typed the wrong command and don't know how to undo what you did, you can simply refresh this page and start from any of the checkpoints provided.</p>
+
+
             <p>Side note: It's totally ok to feel slightly confused right now. If you keep reading this guide you'll get the hang of it. We still have a bit more to do, giving us plenty of time to practice. Here's what coming next:</p>
             <ul>
-                <li>Adding the Hadouken pose when a user clicks on Ryu</li>
-                <li>Adding the Hadouken next to Ryu</li>
-                <li>Making the Hadouken move</li>
-                <li>Getting Ryu out of the Hadouken pose</li>
-                <li>Removing the Hadouken once it's done moving</li>
+                <li>Adding the Hadouken pose when a user clicks on Ryu.</li>
+                <li>Adding the Hadouken next to Ryu.</li>
+                <li>Making the Hadouken move.</li>
+                <li>Getting Ryu out of the Hadouken pose.</li>
+                <li>Removing the Hadouken once it's done moving.</li>
             </ul>
 
             <h3>The Hadouken Pose</h3>
             <p>We now want to change Ryu's pose when someone clicks on him. To do this we'll use <a href="http://api.jquery.com/mousedown/" target="blank">jQuery's Mousedown API</a>. Mousedown only takes 1 function which gets triggered whenever somebody clicks on the desired element. Here's how to use it:</p>
-            <pre><code>$('#my-div img').mousedown( function() {
+<pre><code>$('#my-div img').mousedown( function() {
     this.src = 'http://i.imgur.com/Rfj0a80.png' 
 })</code></pre>
             
@@ -229,7 +234,7 @@ $('#my-div img').hover( function() {
                 <li><span class="code-review">function() { this.src = 'http://i.imgur.com/Rfj0a80.png' }</span> We then pass our function. This function will change the src of the image on mousedown (you may notice that this is VERY similar to what we did earlier).
             </ul>
             <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -243,7 +248,7 @@ $('#my-div img').mousedown( function() {
             <h3>Adding The Hadouken</h3>
             <p>Let's add the Hadouken, which is available at <a href="http://i.imgur.com/oTyQRvX.gif" target="blank">http://i.imgur.com/oTyQRvX.gif</a>.</p>
             <p>This will be very similar to what we just did above but instead of changing the source of an image we will be appending an element next to Ryu. The element we're appending is an image, with a class of 'demo-hadouken'. Adding this class ensures that the Hadouken is aligned with Ryu's hands (I've taken care of the CSS for you).</p>
-            <pre><code>$('#my-div img').mousedown(function() {
+<pre><code>$('#my-div img').mousedown(function() {
     $('#my-div').append(
     '&lt;img class="demo-hadouken" src="http://i.imgur.com/oTyQRvX.gif">'
     );
@@ -261,7 +266,7 @@ $('#my-div img').mousedown( function() {
             </ul>
 
             <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
-                        <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -279,7 +284,7 @@ $('#my-div img').mousedown(function() {
 
             <h3>Animating The Hadouken</h3>
             <p>It's that moment we've all been waiting for... time to make the Hadouken move! For this we'll use <a href="http://api.jquery.com/animate/" target="blank">jQuery's Animate API</a>.</p>
-            <pre><code>$('#my-div img').mousedown(function() {
+<pre><code>$('#my-div img').mousedown(function() {
     $('.demo-hadouken').animate( {
         "margin-left": "600px"
     }, 1000, 'swing', function() {
@@ -294,13 +299,13 @@ $('#my-div img').mousedown(function() {
                 <li><span class="code-review">function() {</span> We then begin our function.</li>
                 <li><span class="code-review">$('.demo-hadouken').animate(</span> Our function selects an element with a Class of 'demo-hadouken' and uses jQuery's animate API.</li>
                 <li><span class="code-review">{ "margin-left": "600px" }, 1000, 'swing'</span> jQuery animate takes a few parameters: the CSS properties we want to change, a time duration (in miliseconds) and the CSS transition type. In this case we're adding 600px of margin on the left over the course of 1000 milisecond (1 second) and we're using the 'swing' transition, which is the default transition.</li>
-                <li><span class="code-review">, function() { this.remove();</span> We then fire a function once the animation has been completed. This function selects 'this' element (referring to the demo-hadouken and removes it.</li>
+                <li><span class="code-review">, function() { this.remove();</span> We then fire a function once the animation has been completed. This function selects 'this' element (referring to the demo-hadouken) and removes it.</li>
                 <li><span class="code-review">})</span> We then close our above function.</li>
                 <li><span class="code-review">})</span> Finally we close our Mousedown function.</li>
             </ul>
 
             <p class="checkpoint">Checkpoint: Here's all the code we've entered so far. Feel free to copy/ paste this in your console if you get stuck or need to refresh the page.</p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -326,7 +331,7 @@ $('#my-div img').mousedown(function() {
             <h3>Getting Ryu Out of The Hadouken Pose</h3>
             <p>We're almost done! The last thing we'll want to do is make sure that Ryu goes back into his fighting pose after firing the Hadouken. For this we'll use <a href="http://api.jquery.com/mouseup/" target="blank">jQuery's Mouseup API</a>.</p>
 
-            <pre><code>$('#my-div img').mouseup(function() {
+<pre><code>$('#my-div img').mouseup(function() {
     this.src = 'http://i.imgur.com/90Mmdcm.png'
 })</code></pre>
 
@@ -338,7 +343,7 @@ $('#my-div img').mousedown(function() {
             </ul>
 
             <p class="checkpoint">Final checkpoint: Here's all the code we've written!</p>
-            <pre><code>$('#my-div').append('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -367,13 +372,13 @@ $('#my-div img').mouseup(function() {
         <h3>Extra Credit</h3>
         <p>If you click on Ryu 100 times really fast you'll notice that Hadoukens start firing everywhere. While this looks really cool, this is an unintended effect which is happening because we're not removing existing Hadoukens before adding new ones. To fix this we need to enter the code below BEFORE we fire new Hadoukens.</p>
 
-        <pre><code>$('#my-div img').mousedown(function() {
+        <p>Note: Just adding the code below will make Ryu STOP firing Hadoukens. That's because our events are in the WRONG order. Take a look at the following section, where everything is happening in the right order.</p>
+<pre><code>$('#my-div img').mousedown(function() {
     $('.demo-hadouken').remove();
 })</code></pre>
-        <p>Note: Just adding the code above will make Ryu STOP firing Hadoukens. That's because our events are in the WRONG order. Take a look at the code below, where everything is happening in the right order.</p>
 
         <h3>The Full Code</h3>
-        <pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
+<pre><code>$('#my-div').html('&lt;img src="http://i.imgur.com/90Mmdcm.png"&gt;')
 $('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
@@ -411,17 +416,17 @@ $('#my-div img').mouseup(function() {
         </div>
 
         <div class="appendix">
-            <div class="section" id="installing-jquery">
+            <div class="section">
                 <h2>Appendix</h2>
                 <h3>How to install jQuery?</h3>
                 <p>The easiest way to install jQuery is to grab the code from <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="blank">Google</a>. Here is the code snippet:</p>
-                <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+<pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
 
                 <p>Note: Notice that there's no "http:" or "https:" before the "//" in the src of the tag. This ensures that both HTTP and HTTPS pages can load this code. If you're coding locally on your computer you'll need to add "http:" to the beginning of the src to make sure jQuery loads. Here's what your script should look like:</p>
-                <pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
 
                 <p>You can now create a basic html file and add the jQuery script inside the &lt;head&gt; tag. In the example below we also added a JavaScript file called 'example.js', this is where we would hypothetically write our jQuery code.</p>
-                <pre><code>&lt;html&gt;
+<pre><code>&lt;html&gt;
     &lt;head&gt;
         &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
         &lt;script src="example.js"&gt;&lt;/script&gt;
@@ -433,16 +438,6 @@ $('#my-div img').mouseup(function() {
                 <p>Note: You'll want to make sure to only use jQuery once your DOM is ready. Don't worry if this sounds abstract and confusing, <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="blank">here's an explanation and how to achieve this</a>.</p>
             </div>
         </div>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#what-is-jquery">What is jQuery</a></li>
-            <li><a href="#installing-jquery">Installing jQuery</a></li>
-            <li><a href="#opening-the-console">Opening Chrome's Console</a></li>
-            <li><a href="#selecting-an-element">Selecting an Element in jQuery</a></li>
-            <li><a href="#jquery-api">Using the jQuery API for Fun</a></li>
-            <li><a href="#end-goal">Our Small jQuery Project</a></li>
-            <li><a href="#project-start">Getting Started with Our Project</a></li>
-        </ul>
 
         <div class="hidden">
             <img src="images/ryu_animated.gif" />
@@ -462,9 +457,6 @@ $('#my-div img').mouseup(function() {
         <script>hljs.initHighlightingOnLoad();</script>
         <!-- Syntax Highlighting Ends -->
 
-        <!-- Waypoints && Skrollr -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.11/skrollr.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-        <!-- Waypoints -->
     </body>
 </html>
