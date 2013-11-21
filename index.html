@@ -36,7 +36,7 @@
             <h2>What is jQuery</h2>
             <p>As said on jQuery.com: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling..."</p>
 
-            <p>Here's another way to put it: jQuery is a powerful JavaScript library that helps you do awesome things within the browser without having to worry about cross-browser differences, as you would if you wrote raw JavaScript. This means that the jQuery code you write will work seamlessly in Chrome, Safari, Internet Explorer, Firefox and Opera.</p>
+            <p>Here's another way to put it: jQuery is a powerful JavaScript library that works in all browsers, and enables you to write much less code than you otherwise would with plain JavaScript.</p>
         </div>
 
 
@@ -50,7 +50,7 @@
                 <li>Use the keyboard shortcut Command: Option + J (Mac) or Control + Shift  + J (Windows/Linux).</li>
                 <li>You can also go to View > Developer > JavaScript Console.</li>
             </ul>
-            <p>Here's what your console should look like.</p>
+            <p>Here's what your console should look like (you may or may not have error messages, don't worry about those).</p>
             <image src="images/chrome-console-1.png" class="screenshot" />
         </div>
 
@@ -77,6 +77,7 @@
 
         <div class="section pulled">
             <h3>Using the jQuery API</h3>
+            <p>Side note: In the context of jQuery, the API is simply a list of all the things you can do with jQuery. Here's a link to the <a href="http://api.jquery.com/" target="blank">full API</a>.</p>
             <p>Now that you know how to select an element, let's go ahead and change the color of our square. How about a nice <a href="http://www.cssportal.com/css3-color-names/" target="blank">LightSkyBlue</a> color? (That's the name of the CSS color.) In order to do this we will use <a href="http://api.jquery.com/css/" target="blank">jQuery's CSS API</a>. Here's what you need to type:</p>
             <pre><code>$('#green-box').css('background-color','lightskyblue')</code></pre>
 
@@ -104,9 +105,11 @@
 
             <p>We have a hadouken image conveniently saved at <a href="http://i.imgur.com/8NArGWZ.gif" target="blank">http://i.imgur.com/8NArGWZ.gif</a>. To add this image to our box we'll use an <a href="http://htmldog.com/reference/htmltags/img/" target="blank">HTML image tag</a> to create the image and use <a href="http://api.jquery.com/html/" target="blank">jQuery's HTML API</a> to add the image.</p>
 
-            <p>Here's how to do this:</p>
+            <p>Here's how to do this (feel free to just copy/ paste image URLs):</p>
             <pre><code>$('#green-box').html('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
-
+            
+            <p>Note: Notice that both the class and the src are using double quotes "", that's because <a href="http://en.wikipedia.org/wiki/Nested_quotation#In_JavaScript_programming" target="blank">we're nesting them</a>.</p>
+            
             <p>Another way to add the hadouken would be to use <a href="http://api.jquery.com/append/" target="blank">jQuery's Append API</a>.</p>
             <pre><code>$('#green-box').append('&lt;img src="http://i.imgur.com/8NArGWZ.gif" />')</code></pre>
 
@@ -186,19 +189,20 @@
 
             <p>Below's the code you need to run.</p>
             <p>Quick note: Since you're using your console, it's easier to type all this code in one long line. But, if you prefer to use several lines, you can also hit "option" + "enter" on a Mac to get a new line. Once you're done typing everything hit "enter".</p>
+
 <pre><code>$('#my-div img').hover( function() {
     this.src = 'http://i.imgur.com/nTj3Fxx.gif'
 }, function() {
     this.src = 'http://i.imgur.com/90Mmdcm.png'
 })</code></pre>
 
-            <p>Don't worries if your code got messed up, there's a checkpoint a few scrolls away.</p>
+            <p>If your code doesn't work, don't panic. Make sure to pay close attention to the syntax, it's really easy to make typos. Also, I've included a checkpoint a few scrolls down.</p>
 
             <p>Let's go over what's happening in the above block of code.</p>
             <ul>
                 <li><span class="code-review">$('#my-div img')</span> First, we select the image that is INSIDE #my-div.</li>
                 <li><span class="code-review">.hover(</span> Then we use jQuery's hover API.</li>
-                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/TYvGQPJ.gif' }</span> We then pass our first function. All this is saying is that we'll change the source (or, as said in HTML, the 'src') for 'this' element. The 'this' here refers to the image inside our &lt;div>, which we selected 2 steps ago. Here's a detailed explanation on using <a href="http://stackoverflow.com/questions/3127429/javascript-this-keyword" target="blank">'this'</a> in JavaScript and jQuery (a tricky concept).</li>
+                <li><span class="code-review">function() { this.src = 'http://i.imgur.com/TYvGQPJ.gif' }</span> We then pass our first function. All this is saying is that we'll change the source (or, as said in HTML, the 'src') for 'this' element. The 'this' here refers to the image inside our &lt;div>, which we selected 2 steps ago.</li>
                 <li><span class="code-review">,</span> Is used to separate our functions.</li>
                 <li><span class="code-review">function() { this.src = 'http://i.imgur.com/JFMYx3j.png' }</span> Finally, we pass our second function which does the same thing as our previous function but with a different image.</li>
             </ul>
@@ -260,13 +264,15 @@ $('#my-div img').mousedown( function() {
     );
 })</code></pre>
 
+            <p class="protip">Protip: This is the second mousedown event we're adding to '#my-div img'. These events will run in the order in which they were added.</p>
+
             <p>And here's what's happening:</p>
             <ul>
                 <li><span class="code-review">$('#my-div img')</span> First, we select the image that is inside #my-div.</li>
                 <li><span class="code-review">.mousedown(</span> Then use jQuery's Mousedown API.</li>
                 <li><span class="code-review">function() {</span> We then begin writing our function.</li>
                 <li><span class="code-review">$('#my-div').append(</span> When our function runs we're going to select #my-div and append something to it.</li>
-                <li><span class="code-review">'&lt;img class='demo-hadouken' src="http://i.imgur.com/oTyQRvX.gif">'</span> That something happens to be an image with a class of "demo-hadouken" and a src of "http://i.imgur.com/oTyQRvX.gif". Notice that both the class and the src are using double quotes "", that's because <a href="http://en.wikipedia.org/wiki/Nested_quotation" target="blank">we're nesting them</a>.</li>
+                <li><span class="code-review">'&lt;img class='demo-hadouken' src="http://i.imgur.com/oTyQRvX.gif">'</span> That something happens to be an image with a class of "demo-hadouken" and a src of "http://i.imgur.com/oTyQRvX.gif".</li>
                 <li><span class="code-review">);</span> We then close our append function.</li>
                 <li><span class="code-review">})</span> We then close our mousedown function.</li>
             </ul>

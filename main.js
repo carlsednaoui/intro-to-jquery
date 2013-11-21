@@ -77,7 +77,12 @@ $( document ).ready(function() {
   });
 
   $('#main-example-add-sound').on('click', function() {
-    playHadouken = true;
-    $(this).html('Sound added, click on Ryu');
+    playHadouken = !playHadouken;
+
+    if (playHadouken)
+      $(this).html('Sound added, click on Ryu');
+
+    if (!playHadouken)
+      $(this).html('Sound removed, click to add it back');
   });
 });
