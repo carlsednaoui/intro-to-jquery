@@ -1,7 +1,12 @@
-Add google authorship
-Add parallax events
-Add my twitter handle
-Show open sourced code
+# Intro to jQuery
+An interactive jQuery guide created for [Thinkful](http://www.thinkful.com).
 
-# next guide
-http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
+## Finding the guide
+This guide lives at [Thinkful.com/learn/intro-to-jquery](http://www.thinkful.com/learn/intro-to-jquery).
+
+## Contributing
+Suggestions and pull requests welcome!
+
+## Preview
+![](http://i.imgur.com/J7UPAd2.png)
+![](http://i.imgur.com/zE4ijTr.png)
