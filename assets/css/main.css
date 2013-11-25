@@ -1,61 +1,3 @@
-******************************
--> CSS reset
-*******************************/
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/*******************************
--> Main styles
-*******************************/
-
 body {
     margin: 50px auto;
     width: 850px;
@@ -65,6 +7,14 @@ body {
     font-size: 1.1em;
     line-height: 1.6em;
     -webkit-font-smoothing: antialiased;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+  padding: 15px 0;
 }
 
 h1 {
@@ -141,7 +91,7 @@ h3 {
     font-size: .9em
 }
 
-.screenshot {
+.section img[alt=screenshot] {
     max-width: 100%;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -157,16 +107,20 @@ h3 {
     float: left;
 }
 
+#stop-green-top {
+  padding-bottom: 55px
+}
+
 #my-div {
     display: inline-block;
     float: left;   
 }
 
-.code-review {
+.section p code, .section li code {
     color: #EA6153;
 }
 
-.code-review:after {
+.section p code:after, .section li code:after {
     content: " ";
 }
 
@@ -180,7 +134,8 @@ p a, ul a{
     text-decoration: none;
 }
 
-.protip {
+/* pro tips */
+blockquote {
     color: #3D566E;
     font-style: italic;
 }
@@ -195,11 +150,12 @@ p a, ul a{
     margin-left: -100px;
 }
 
-div pre code {
+pre code {
     padding-left: 15px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
+    font-family: monospace;
 }
 
 
@@ -208,6 +164,10 @@ div pre code {
     vertical-align: top;
     margin-top: 55px; 
     margin-left: -55px;
+}
+
+#main-example-container {
+  width: 960px;
 }
 
 #main-example-add-sound {
@@ -231,34 +191,8 @@ div pre code {
     height: 40px;
 }
 
-/* Ruy in CSS */
-/*#ruy-css {
-    height: 500px;
-    width: 500px;
-    background: url('images/ruy_stand_still.png') no-repeat;
-}
-
-#ruy-css:hover {
-    background: url('images/ruy_animated.gif') no-repeat;
-}
-
-#ruy-css:active {
-    background: url('images/ryu_hadoken_pose.png') no-repeat;
-}
-
-#ruy-css:active img {
-    visibility: visible;
-    -webkit-animation: moveLeft 1s linear;
-}
-
-#ruy-css img {
-    margin-top: 65px;
-    margin-left: 390px;
-    visibility: hidden;
-}
-
-
-@-webkit-keyframes moveLeft {
-    0%   {margin-left:390px;}
-    100%  {margin-left:1000px;}
+.github_fork {
+    position: absolute;
+    top: 0;
+    right: 0; 
 }

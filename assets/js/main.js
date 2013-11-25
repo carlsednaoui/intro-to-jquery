@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   // Green box positioning logic
   $(window).on('scroll', function() {
     var y_scroll_pos   = window.pageYOffset,
@@ -34,26 +35,17 @@ $( document ).ready(function() {
   });
 
   
-  // Skrollr logic
-  $('h1, h2, h3, p, ul, code, img').each(function(i, el) {
-    $(el).attr('data-bottom-top', 'opacity:0;');
-    $(el).attr('data-center-top', 'opacity:1;');
-  });
-
-  skrollr.init();
-
-
   // jQuery project demo
   var playHadouken = false;
 
   $('#main-example').hover(function() {
-    this.src = 'images/ryu_animated.gif'}, function() {
-      this.src = 'images/ryu_stand_still.png';
+    this.src = 'img/ryu_animated.gif'}, function() {
+      this.src = 'img/ryu_stand_still.png';
     }
   );
 
   $('#main-example').on('mousedown', function() {
-    this.src = 'images/ryu_hadoken_pose.png';
+    this.src = 'img/ryu_hadoken_pose.png';
   });
 
   $('#main-example').on('mousedown', function() {
@@ -61,7 +53,7 @@ $( document ).ready(function() {
   });
   
   $('#main-example').on('mousedown', function() {
-    $('#main-example-container').append('<img class="moving-hadouken" src="images/hadouken.gif" >');
+    $('#main-example-container').append('<img class="moving-hadouken" src="img/hadouken.gif" >');
   });
 
   $('#main-example').on('mousedown', function() {
@@ -73,7 +65,7 @@ $( document ).ready(function() {
   });
 
   $('#main-example').on('mouseup', function() {
-    this.src = 'images/ryu_animated.gif';
+    this.src = 'img/ryu_animated.gif';
   });
 
   $('#main-example-add-sound').on('click', function() {
